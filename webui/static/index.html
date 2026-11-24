@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASTRA Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/app.css?v=3">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">
+      <svg viewBox="0 0 32 32"><path d="M16 2 29 9.5v13L16 30 3 22.5v-13Z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16 9 22 12.5v7L16 23l-6-3.5v-7Z" fill="currentColor"/></svg>
+    </div>
+    <div>
+      <div class="name">ASTRA</div>
+      <div class="tag">Autonomous Security and Threat Response using Agentic AI for Blockchain</div>
+    </div>
+  </div>
+  <div class="top-right">
+    <span id="analyst" class="pill neutral" title="">Analyst</span>
+    <button id="reset" class="ghost">Reset demo</button>
+  </div>
+</header>
+
+<nav class="steps" id="steps">
+  <div class="step" data-step="network"><b>1</b>Network</div>
+  <div class="step" data-step="request"><b>2</b>Join request</div>
+  <div class="step" data-step="layer1"><b>3</b>Layer 1 · investigation</div>
+  <div class="step" data-step="decision"><b>4</b>Admin decision</div>
+  <div class="step" data-step="layer2"><b>5</b>Layer 2 · monitoring</div>
+  <div class="step" data-step="outcome"><b>6</b>Revocation</div>
+</nav>
+
+<main class="grid">
+  <section class="card net-card">
+    <div class="card-head">
+      <div>
+        <h2>Blockchain network</h2>
+        <p class="sub" id="net-sub">Six relay validators in a ring</p>
+      </div>
+      <div class="legend">
+        <span><i class="dot relay"></i>Relay validator</span>
+        <span><i class="dot member"></i>Admitted member</span>
+        <span><i class="dot candidate"></i>Candidate</span>
+        <span><i class="dot flagged"></i>Flagged</span>
+      </div>
+    </div>
+    <svg id="net" viewBox="0 0 760 560" role="img" aria-label="Network topology"></svg>
+    <div class="stats">
+      <div class="stat"><span>Validating replicas</span><b id="s-replicas">6</b></div>
+      <div class="stat"><span>Chain height</span><b id="s-height">0</b></div>
+      <div class="stat"><span>Replica agreement</span><b id="s-agree">–</b></div>
+      <div class="stat"><span>Members admitted</span><b id="s-members">0</b></div>
+    </div>
+    <div class="chain-head">
+      <h3>Ledger · latest blocks on relay-0</h3>
+      <span class="sub">Each block stores the SHA-256 hash of the previous one</span>
+    </div>
+    <div class="chain" id="chain"></div>
+  </section>
+
+  <section class="card panel" id="panel"></section>
+</main>
+
+<section class="card log-card">
+  <div class="card-head"><h2>Audit trail</h2><p class="sub">Every state change is written to SQLite with its reason</p></div>
+  <ol id="log" class="log"></ol>
+</section>
+
+<div id="toast" class="toast" role="status"></div>
+<script src="/static/app.js?v=3"></script>
+</body>
+</html>
