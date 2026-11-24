@@ -1,6 +1,7 @@
 """Streamlit interface for the local ASTRA demonstration."""
 
 from collections import Counter
+from html import escape
 from uuid import uuid4
 
 import networkx as nx
@@ -10,14 +11,42 @@ import streamlit as st
 from astra.admission import MORE, PENDING, REVIEW, REVOKED, configured_model, database, decide, investigate, register, revoke
 from astra.monitoring import (CHECKS, SCENARIOS as MONITORING_SCENARIOS, explain_finding, monitor,
                               record_observations, synthetic_batch)
+from astra.policy import TRUST_THRESHOLD
 from astra.simulation import RELAYS, SCENARIOS, established_topology
+
+
+CONSOLE_STYLE = """
+<style>
+[data-testid="stMainBlockContainer"] {max-width: 1180px; padding-top: 2.6rem;}
+[data-testid="stSidebar"] {border-right: 1px solid #dce3db;}
+[data-testid="stMainBlockContainer"] h1 {font-size: clamp(2rem, 5vw, 2.65rem); letter-spacing: -.045em;}
+[data-testid="stMainBlockContainer"] h2 {font-size: 1.35rem; letter-spacing: -.02em;}
+[data-testid="stMetric"] {border-top: 1px solid #cdd8ce; padding-top: .55rem;}
+[data-testid="stMetricValue"] {font-size: 1.7rem; font-variant-numeric: tabular-nums;}
+.astra-masthead {font-size: .78rem; font-weight: 700; letter-spacing: .09em; color: #17665c;}
+.astra-kicker {color: #4e635a; font-size: .78rem; margin-bottom: .35rem;}
+.astra-state {display: inline-block; padding: .25rem .55rem; border: 1px solid #d7dfd5;
+              border-radius: .3rem; background: #f0f2ed; color: #283c34; font-size: .83rem;}
+.astra-state--approved {color: #135244; background: #e5f1eb; border-color: #bcd9ca;}
+.astra-state--review {color: #6d4b16; background: #faf0db; border-color: #e8d7ae;}
+.astra-state--closed {color: #812e29; background: #f8eae6; border-color: #eacdc6;}
+</style>
+"""
+
+
+def status_label(value):
+    return value.replace("_", " ").title()
+
+
+def score_label(value):
+    return "Unavailable" if value is None else f"{value:.3f}"
 
 
 def topology_figure(graph, candidate):
     positions = nx.spring_layout(graph, seed=17)
     figure = go.Figure()
-    for proposed, name, color in ((False, "Established", "#526782"),
-                                  (True, "Proposed", "#a78bfa")):
+    for proposed, name, color in ((False, "Established link", "#93a29c"),
+                                  (True, "Proposed link", "#986319")):
         x, y = [], []
         for source, target, attrs in graph.edges(data=True):
             if attrs.get("proposed", False) == proposed:
@@ -26,29 +55,41 @@ def topology_figure(graph, candidate):
                 y.extend([a[1], b[1], None])
         figure.add_scatter(x=x, y=y, mode="lines", name=name, hoverinfo="skip",
                            line={"color": color, "dash": "dot" if proposed else "solid"})
-    labels = ["Candidate" if node == candidate["id"] and candidate["status"] != "APPROVED"
-              else node[:10] for node in graph]
-    colors = ["#38bdf8" if node in RELAYS else
-              "#a78bfa" if node == candidate["id"] and candidate["status"] != "APPROVED"
-              else "#4ade80" for node in graph]
-    figure.add_scatter(x=[positions[node][0] for node in graph],
-                       y=[positions[node][1] for node in graph],
-                       mode="markers+text", text=labels, textposition="top center",
-                       hovertext=list(graph), hoverinfo="text",
-                       marker={"size": 15, "color": colors}, showlegend=False)
-    figure.update_layout(template="plotly_dark", height=370, margin=dict(l=20, r=20, t=25, b=20),
-                         xaxis={"visible": False}, yaxis={"visible": False})
+    proposed_id = candidate["id"] if candidate["status"] != "APPROVED" else None
+    for name, color, symbol, nodes in (
+        ("Initial relay", "#41556c", "circle", [node for node in graph if node in RELAYS]),
+        ("Approved member", "#187165", "circle",
+         [node for node in graph if node not in RELAYS and node != proposed_id]),
+        ("Candidate", "#986319", "diamond", [node for node in graph if node == proposed_id]),
+    ):
+        if nodes:
+            figure.add_scatter(x=[positions[node][0] for node in nodes],
+                               y=[positions[node][1] for node in nodes],
+                               name=name, mode="markers+text",
+                               text=["Candidate" if node == proposed_id else node[:10] for node in nodes],
+                               textposition="top center", hovertext=nodes, hoverinfo="text",
+                               marker={"size": 13, "color": color, "symbol": symbol,
+                                       "line": {"width": 1.5, "color": "#fcfbf8"}})
+    figure.update_layout(
+        template="plotly_white", height=365, margin=dict(l=24, r=24, t=18, b=12),
+        paper_bgcolor="#f1f3ee", plot_bgcolor="#f1f3ee", font={"color": "#293e36", "size": 11},
+        xaxis={"visible": False}, yaxis={"visible": False},
+        legend={"orientation": "h", "y": -.06, "x": 0},
+    )
     return figure
 
 
-st.set_page_config(page_title="ASTRA | Node Admission", layout="wide")
+st.set_page_config(page_title="ASTRA | Network Operations", layout="wide")
+st.markdown(CONSOLE_STYLE, unsafe_allow_html=True)
 store = database()
-st.title("ASTRA")
-st.markdown("**Agentic Blockchain Security Platform**")
-st.caption("Layer 1 admission and Layer 2 monitoring · Synthetic evidence · Local administrator console")
+st.title("Network operations")
+st.caption("Node admission, investigations and post-admission monitoring")
 
 with st.sidebar:
-    st.header("Create a candidate")
+    st.markdown('<p class="astra-masthead">ASTRA</p>', unsafe_allow_html=True)
+    st.caption("Private blockchain simulator")
+    st.divider()
+    st.header("New admission")
     with st.form("register"):
         scenario = st.selectbox("Evidence scenario", list(SCENARIOS), format_func=SCENARIOS.get)
         seed = st.number_input("Scenario seed", min_value=0, max_value=2**32 - 1, value=41)
@@ -58,13 +99,11 @@ with st.sidebar:
 
 candidates = store.list()
 counts = Counter(candidate["status"] for candidate in candidates)
-columns = st.columns(6)
+columns = st.columns(4)
 for col, label, value in zip(columns,
-                             ("Requests", "Awaiting investigation", "Approved", "Rejected",
-                              "With reports", "Reports to review"),
-                             (len(candidates), counts[PENDING] + counts[MORE], counts["APPROVED"],
-                              counts["REJECTED"], sum(bool(item["report"]) for item in candidates),
-                              counts[REVIEW])):
+                             ("Admission requests", "To investigate", "To review", "Approved members"),
+                             (len(candidates), counts[PENDING] + counts[MORE],
+                              counts[REVIEW], counts["APPROVED"])):
     col.metric(label, value)
 
 if not candidates:
@@ -72,12 +111,19 @@ if not candidates:
     st.stop()
 
 by_id = {row["id"]: row for row in candidates}
-candidate_id = st.selectbox(
-    "Admission request", list(by_id), key="candidate",
-    format_func=lambda item: f"{SCENARIOS[by_id[item]['scenario']]} · {item[:10]}",
-)
-candidate = by_id[candidate_id]
-st.write(candidate["status"].replace("_", " ").title())
+with st.container(border=True):
+    selection, state_column = st.columns([3, 1], vertical_alignment="center")
+    candidate_id = selection.selectbox(
+        "Admission request", list(by_id), key="candidate",
+        format_func=lambda item: f"{SCENARIOS[by_id[item]['scenario']]} · {item[:10]}",
+    )
+    candidate = by_id[candidate_id]
+    tone = {"APPROVED": "approved", REVIEW: "review", "REJECTED": "closed", REVOKED: "closed"}
+    state_column.markdown(
+        f'<div class="astra-kicker">Membership status</div>'
+        f'<span class="astra-state astra-state--{tone.get(candidate["status"], "pending")}">'
+        f'{escape(status_label(candidate["status"]))}</span>', unsafe_allow_html=True,
+    )
 if candidate["status"] in (PENDING, MORE) and st.button("Run investigation", type="primary"):
     try:
         with st.status("Collecting evidence", expanded=False) as status:
@@ -101,7 +147,8 @@ with evidence_tab:
         for item in (evidence or {}).get("eclipse", {}).get("observations", []):
             if item["peer"] in graph:
                 graph.add_edge(candidate_id, item["peer"], proposed=True)
-    st.plotly_chart(topology_figure(graph, candidate), use_container_width=True)
+    st.plotly_chart(topology_figure(graph, candidate), use_container_width=True, theme=None,
+                    config={"displayModeBar": False, "scrollZoom": False})
     if evidence:
         st.subheader("Investigation ledger")
         replica_count = evidence["network"].get("replica_count")
@@ -121,13 +168,19 @@ with agents_tab:
         if "error" in report:
             st.error(f"Investigation failed during evidence collection ({report['error']}).")
         else:
-            st.write(report["planning"]["rationale"])
-            st.write("Dispatch order", " → ".join(report["order"]))
+            st.subheader("Supervisor review")
             st.write(report["supervisor_review"]["summary"])
+            st.caption("Dispatch order · " + " → ".join(name.title() for name in report["order"]))
+            with st.expander("Planning rationale"):
+                st.write(report["planning"]["rationale"])
             for name in report["order"]:
                 result = report["results"][name]
-                with st.expander(name.title()):
-                    st.json(result["assessment"])
+                assessment = result["assessment"]
+                with st.expander(f"{name.title()} · {status_label(assessment['status'])}"):
+                    st.write(assessment["explanation"])
+                    st.caption(f"Risk {score_label(assessment['risk'])} · "
+                               f"Confidence {score_label(assessment['confidence'])}")
+                    st.json(assessment, expanded=False)
                     for call in result["calls"]:
                         st.write(f"{call['tool']} · {call['id']}")
                         st.json(call["result"], expanded=False)
@@ -139,17 +192,27 @@ with agents_tab:
 with trust_tab:
     if report:
         trust = report["trust"]
-        st.metric("Trust factor", f"{trust['factor']:.3f}" if trust["factor"] is not None else "Unavailable")
+        st.subheader("Admission assessment")
+        score, cutoff, recommendation = st.columns(3)
+        score.metric("Trust factor", score_label(trust["factor"]))
+        cutoff.metric("Acceptance threshold", f"{TRUST_THRESHOLD:.2f}")
+        recommendation.metric("Recommendation", status_label(trust["recommendation"]))
         if trust.get("adjusted_attack_risk") is not None:
-            st.caption(f"Original weighted formula {trust['original_factor']:.3f} · "
-                       f"Adjusted attack risk {trust['adjusted_attack_risk']:.3f}")
-        st.markdown(f"**Recommendation: {trust['recommendation'].replace('_', ' ').title()}**")
+            st.caption(f"Original weighted formula {score_label(trust.get('original_factor'))} · "
+                       f"Adjusted attack risk {score_label(trust['adjusted_attack_risk'])}")
         if trust.get("formula_recommendation") != trust["recommendation"]:
             st.caption("The Trust Factor alone meets the acceptance threshold. A high-risk finding requires review.")
         for item in trust.get("escalations", []):
             st.warning(f"{item['dimension'].title()} review required. {item['reason']}")
-        st.json(trust)
+        if trust.get("risks"):
+            st.table([{"Specialist": name.title(), "Risk": score_label(risk)}
+                      for name, risk in trust["risks"].items()])
+        with st.expander("Scoring inputs and saved fields"):
+            st.json(trust)
+    else:
+        st.info("Run an investigation to see the admission assessment.")
 with admin_tab:
+    st.subheader("Membership decision")
     if candidate["status"] == REVIEW:
         with st.form("decision"):
             action = st.radio("Decision", ["approve", "reject", "more"], horizontal=True,
@@ -171,10 +234,11 @@ with admin_tab:
                     st.rerun()
                 except ValueError as error:
                     st.error(str(error))
-    st.write("Admission audit trail")
+    st.subheader("Admission audit trail")
     st.dataframe(store.events(candidate_id), use_container_width=True)
 
 with monitor_tab:
+    st.subheader("Monitoring window")
     if candidate["status"] not in ("APPROVED", REVOKED):
         st.info("Post-admission monitoring begins after the selected candidate is approved.")
     else:
