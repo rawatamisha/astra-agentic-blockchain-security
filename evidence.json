@@ -1,0 +1,3321 @@
+[
+  {
+    "scenario": "normal",
+    "seed": 41,
+    "synthetic": true,
+    "model_enabled": false,
+    "administrator_decision": null,
+    "report": {
+      "order": [
+        "wallet",
+        "sybil",
+        "eclipse",
+        "finney"
+      ],
+      "planning": {
+        "mode": "evidence_only",
+        "rationale": "No model configured"
+      },
+      "results": {
+        "wallet": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "sybil": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "eclipse": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "finney": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        }
+      },
+      "supervisor_review": {
+        "summary": "Supervisor unavailable",
+        "concerns": [],
+        "request_followup": true
+      },
+      "trust": {
+        "risks": {
+          "sybil": null,
+          "wallet": null,
+          "finney": null,
+          "eclipse": null
+        },
+        "positive_inputs": {
+          "identity": 1.0,
+          "transaction": 1.0,
+          "network": 1.0,
+          "history": 1,
+          "behavior": 0.65625
+        },
+        "missing": [
+          "sybil",
+          "wallet",
+          "finney",
+          "eclipse"
+        ],
+        "missing_positive": [],
+        "supervisor_followup": true,
+        "attack_risk": null,
+        "positive_trust": null,
+        "factor": null,
+        "recommendation": "MORE_EVIDENCE"
+      },
+      "evidence": {
+        "network": {
+          "nodes": [
+            "relay-0",
+            "relay-1",
+            "relay-2",
+            "relay-3",
+            "relay-4",
+            "relay-5",
+            "298f924acb7c559b8200afcfd9a94096e1aa4f14123448a43acaa50aae2d2ab1"
+          ],
+          "edges": [
+            {
+              "source": "relay-0",
+              "target": "relay-1",
+              "proposed": false
+            },
+            {
+              "source": "relay-0",
+              "target": "relay-5",
+              "proposed": false
+            },
+            {
+              "source": "relay-0",
+              "target": "298f924acb7c559b8200afcfd9a94096e1aa4f14123448a43acaa50aae2d2ab1",
+              "proposed": true
+            },
+            {
+              "source": "relay-1",
+              "target": "relay-2",
+              "proposed": false
+            },
+            {
+              "source": "relay-1",
+              "target": "298f924acb7c559b8200afcfd9a94096e1aa4f14123448a43acaa50aae2d2ab1",
+              "proposed": true
+            },
+            {
+              "source": "relay-2",
+              "target": "relay-3",
+              "proposed": false
+            },
+            {
+              "source": "relay-2",
+              "target": "298f924acb7c559b8200afcfd9a94096e1aa4f14123448a43acaa50aae2d2ab1",
+              "proposed": true
+            },
+            {
+              "source": "relay-3",
+              "target": "relay-4",
+              "proposed": false
+            },
+            {
+              "source": "relay-3",
+              "target": "298f924acb7c559b8200afcfd9a94096e1aa4f14123448a43acaa50aae2d2ab1",
+              "proposed": true
+            },
+            {
+              "source": "relay-4",
+              "target": "relay-5",
+              "proposed": false
+            }
+          ],
+          "replicas_agree": true
+        },
+        "blocks": [
+          {
+            "height": 0,
+            "previous": "b8e1c0cbb41ebce97df46dfcf51a3502c5e198ddb3160f83a49de589e9ae6de4",
+            "timestamp": 0,
+            "transactions": [],
+            "hash": "1085482c512357a1650ed89434840349ef56b0fdef7954e95d073ece17790b94"
+          },
+          {
+            "height": 1,
+            "previous": "1085482c512357a1650ed89434840349ef56b0fdef7954e95d073ece17790b94",
+            "timestamp": 1,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "amount": 20000,
+                "nonce": 0,
+                "timestamp": 1,
+                "signature": "656820a7a39b8526b5e76061e1561c2fd2fb61ae105139dbeaa2161f499c2a7a893aa772aa0b38950e438e126791a8427e6d79675d992cc98b33a64a17968a0f"
+              }
+            ],
+            "hash": "fced56bf697d0f0df0638fd4a1776fc53c67e0e7573feff83057bab90ce2b97d"
+          },
+          {
+            "height": 2,
+            "previous": "fced56bf697d0f0df0638fd4a1776fc53c67e0e7573feff83057bab90ce2b97d",
+            "timestamp": 2,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 9,
+                "nonce": 0,
+                "timestamp": 2,
+                "signature": "6ea907a6e233d99e40c8ddb6d5089a2aba5299ee54ffcfb7949726cf0f97499dda4441abd78f5bfefe1093a127b52cfee7ab68c9cc9da193c55a5c389fb06609"
+              }
+            ],
+            "hash": "674b4bbd82bb3206caa9652c212fbafacea50f92d1367daf22262b0a4c22d87e"
+          },
+          {
+            "height": 3,
+            "previous": "674b4bbd82bb3206caa9652c212fbafacea50f92d1367daf22262b0a4c22d87e",
+            "timestamp": 18,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40",
+                "amount": 7,
+                "nonce": 1,
+                "timestamp": 18,
+                "signature": "8256badee5cd2bd98bc7ceefdcacc4a1c75ae5d9c46deebf1f7b1828d64e5f4c351afefc104dfa8ec2810e8704ebba127dc63df5a22752299f7699f229d4ce03"
+              }
+            ],
+            "hash": "70664afc33ab2b44c28bc2e5dda6b1324c71139225b4fc2bc16a35fef16dcefd"
+          },
+          {
+            "height": 4,
+            "previous": "70664afc33ab2b44c28bc2e5dda6b1324c71139225b4fc2bc16a35fef16dcefd",
+            "timestamp": 25,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "4c28598a11814a58e7a2a24279468c246ca8e88e6293748d15380897b23807d4",
+                "amount": 15,
+                "nonce": 1,
+                "timestamp": 25,
+                "signature": "45061f6c1b65f9e925855a8524b29bee58f898001cef38e0891068bff8a520e5be05fdd735d1fc86d2efa3bdc7d8228d795b1f4d90e72b3c3dbd9cfd17689809"
+              }
+            ],
+            "hash": "3521b9c453cb24fd2f3a29c4c31eb8051c9aff10366836b74eb04f47ba06f073"
+          },
+          {
+            "height": 5,
+            "previous": "3521b9c453cb24fd2f3a29c4c31eb8051c9aff10366836b74eb04f47ba06f073",
+            "timestamp": 26,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "f59719f039202ccd8f74287068f4bdd9e2c51fd68d4626a421551c3e1ac8bb73",
+                "amount": 15,
+                "nonce": 2,
+                "timestamp": 26,
+                "signature": "6c1bfdba7e9696197c5280fbf3e0ef6df79d6f6490dcab2ee9f25a2aa188d568e0dc3b25cad527974ef6233f10e8194dec0480169dd6a8d3ccfd1331d386ce00"
+              }
+            ],
+            "hash": "d97394f8dbdd1c142e8e4bb4ed2fe5ca3066c5f4d1581f4a7479e6c4c018a424"
+          },
+          {
+            "height": 6,
+            "previous": "d97394f8dbdd1c142e8e4bb4ed2fe5ca3066c5f4d1581f4a7479e6c4c018a424",
+            "timestamp": 27,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "c0caff0bb3285e3dbf77addecf081b360e2ac6fb53e7af1970633ac674202eb1",
+                "amount": 15,
+                "nonce": 3,
+                "timestamp": 27,
+                "signature": "9426b750debee42ace20818aa4aa0b57e18f066b62dcbb736ffaf247a96cb8066cf70ab1f1bfc8b1c02ff8a5c32d2609cbc98a1cdaa3763dbec338aafa63ba0e"
+              }
+            ],
+            "hash": "bfb92baf542c2c145f8ea2b522aeda6ab1d815b8ac0a3e97ac2f979a505aedd7"
+          },
+          {
+            "height": 7,
+            "previous": "bfb92baf542c2c145f8ea2b522aeda6ab1d815b8ac0a3e97ac2f979a505aedd7",
+            "timestamp": 34,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "caeac59780074dead63a6168504f1cbe0797194a0c0ec2afa295d45e6afa5a99",
+                "amount": 30,
+                "nonce": 2,
+                "timestamp": 34,
+                "signature": "8012889ac139744206ea8c41c95aa4f866cc8232752653bc35822e383137e2808be3a2e1fa523dfc4de97f2bce3318c73b52536d7db2ff96a9a62e514b81a201"
+              }
+            ],
+            "hash": "783982849bbca18e2b52bfde56318ce82133fb6b0584fd606b0dcc7c4e495d23"
+          },
+          {
+            "height": 8,
+            "previous": "783982849bbca18e2b52bfde56318ce82133fb6b0584fd606b0dcc7c4e495d23",
+            "timestamp": 50,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "94a5c901623c93c7770eea4962f7fe13af4223fcfac9e1b6981409b9115cd9fb",
+                "amount": 14,
+                "nonce": 3,
+                "timestamp": 50,
+                "signature": "3e1bf334c9e82d99fa2d000f83e73bd61ed98e79c6d3308bf1b81eca2523ffe69330ffd19b55ea0357ffb3bc0d36949608159906903c23a5b114e52899f8e806"
+              }
+            ],
+            "hash": "53875a6a71d65ef7ecb970f878013f826bdb8cfe1e05fe1d9e710c46e14d9bc0"
+          },
+          {
+            "height": 9,
+            "previous": "53875a6a71d65ef7ecb970f878013f826bdb8cfe1e05fe1d9e710c46e14d9bc0",
+            "timestamp": 66,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 20,
+                "nonce": 4,
+                "timestamp": 66,
+                "signature": "01b06e909a74ffff1e7f1d5ab645af50258cbb254962eed4ce0d3294892b5da0d61bbc73817b7b931705cbbbe9ea0be9f7cd65a0a69a318f6eab2afe820ec30a"
+              }
+            ],
+            "hash": "1cd3b7293ac934e7bc27e94dd926cb029d7214e7252547cb3b2cee4f175fcfb0"
+          },
+          {
+            "height": 10,
+            "previous": "1cd3b7293ac934e7bc27e94dd926cb029d7214e7252547cb3b2cee4f175fcfb0",
+            "timestamp": 82,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40",
+                "amount": 30,
+                "nonce": 5,
+                "timestamp": 82,
+                "signature": "f03bb2b1cc5ab3db47caeddd3de92bd1a6f1f4b5e04a64af8893e71c01e8a1964d2bd6c2fff667f55855e1ac8d8ed3a15a3d6af67141f6b49dc4f9dcf18acd00"
+              }
+            ],
+            "hash": "8b087c99cc3ab40c6702b6d48bdec6579971ef14485edfeeee4cbdd55f0ba900"
+          },
+          {
+            "height": 11,
+            "previous": "8b087c99cc3ab40c6702b6d48bdec6579971ef14485edfeeee4cbdd55f0ba900",
+            "timestamp": 98,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "caeac59780074dead63a6168504f1cbe0797194a0c0ec2afa295d45e6afa5a99",
+                "amount": 24,
+                "nonce": 6,
+                "timestamp": 98,
+                "signature": "91682e3fef0af7a647097df3e803450b067b07d4882be24ea6bfc7034348d3718632afa12f0a81dea71409c07c88677d0146103c5521c5a6d5d1b6868ea08403"
+              }
+            ],
+            "hash": "834f23370532497977e4effd35026433003474c32771012ecfc57b82bdbd7cf7"
+          }
+        ],
+        "wallet": {
+          "available": true,
+          "history": [
+            {
+              "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+              "recipient": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "amount": 20000,
+              "nonce": 0,
+              "timestamp": 1,
+              "signature": "656820a7a39b8526b5e76061e1561c2fd2fb61ae105139dbeaa2161f499c2a7a893aa772aa0b38950e438e126791a8427e6d79675d992cc98b33a64a17968a0f"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 9,
+              "nonce": 0,
+              "timestamp": 2,
+              "signature": "6ea907a6e233d99e40c8ddb6d5089a2aba5299ee54ffcfb7949726cf0f97499dda4441abd78f5bfefe1093a127b52cfee7ab68c9cc9da193c55a5c389fb06609"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40",
+              "amount": 7,
+              "nonce": 1,
+              "timestamp": 18,
+              "signature": "8256badee5cd2bd98bc7ceefdcacc4a1c75ae5d9c46deebf1f7b1828d64e5f4c351afefc104dfa8ec2810e8704ebba127dc63df5a22752299f7699f229d4ce03"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "caeac59780074dead63a6168504f1cbe0797194a0c0ec2afa295d45e6afa5a99",
+              "amount": 30,
+              "nonce": 2,
+              "timestamp": 34,
+              "signature": "8012889ac139744206ea8c41c95aa4f866cc8232752653bc35822e383137e2808be3a2e1fa523dfc4de97f2bce3318c73b52536d7db2ff96a9a62e514b81a201"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "94a5c901623c93c7770eea4962f7fe13af4223fcfac9e1b6981409b9115cd9fb",
+              "amount": 14,
+              "nonce": 3,
+              "timestamp": 50,
+              "signature": "3e1bf334c9e82d99fa2d000f83e73bd61ed98e79c6d3308bf1b81eca2523ffe69330ffd19b55ea0357ffb3bc0d36949608159906903c23a5b114e52899f8e806"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 20,
+              "nonce": 4,
+              "timestamp": 66,
+              "signature": "01b06e909a74ffff1e7f1d5ab645af50258cbb254962eed4ce0d3294892b5da0d61bbc73817b7b931705cbbbe9ea0be9f7cd65a0a69a318f6eab2afe820ec30a"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40",
+              "amount": 30,
+              "nonce": 5,
+              "timestamp": 82,
+              "signature": "f03bb2b1cc5ab3db47caeddd3de92bd1a6f1f4b5e04a64af8893e71c01e8a1964d2bd6c2fff667f55855e1ac8d8ed3a15a3d6af67141f6b49dc4f9dcf18acd00"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "caeac59780074dead63a6168504f1cbe0797194a0c0ec2afa295d45e6afa5a99",
+              "amount": 24,
+              "nonce": 6,
+              "timestamp": 98,
+              "signature": "91682e3fef0af7a647097df3e803450b067b07d4882be24ea6bfc7034348d3718632afa12f0a81dea71409c07c88677d0146103c5521c5a6d5d1b6868ea08403"
+            }
+          ],
+          "balance": 19866,
+          "model": {
+            "features": {
+              "count": 7,
+              "mean_amount": 19.142857142857142,
+              "counterparties": 4,
+              "frequency": 0.07291666666666667
+            },
+            "isolation_score": -0.47527763802302986,
+            "lower_tail_percentile": 0.65625,
+            "training_size": 160
+          }
+        },
+        "sybil": {
+          "available": true,
+          "funders": [
+            "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a"
+          ],
+          "observed_identities": [
+            {
+              "node_id": "8b93f65b3442c4dff31673c4e39a2bb2cd3ee0e6b37637e2cbc90abac4fb4107",
+              "wallet": "4c28598a11814a58e7a2a24279468c246ca8e88e6293748d15380897b23807d4",
+              "first_seen": 25
+            },
+            {
+              "node_id": "c16e76d91f3d3712e5e77b79e80a5c6bff400a487ed31e79f54e0b3998997ccc",
+              "wallet": "f59719f039202ccd8f74287068f4bdd9e2c51fd68d4626a421551c3e1ac8bb73",
+              "first_seen": 26
+            },
+            {
+              "node_id": "8a866cc928a441d21f07ed12e6a16259c27f5347e334b051b8473c67db50d0bb",
+              "wallet": "c0caff0bb3285e3dbf77addecf081b360e2ac6fb53e7af1970633ac674202eb1",
+              "first_seen": 27
+            }
+          ],
+          "same_timestamp_recipients": []
+        },
+        "eclipse": {
+          "available": true,
+          "observations": [
+            {
+              "peer": "relay-0",
+              "group": 0
+            },
+            {
+              "peer": "relay-1",
+              "group": 1
+            },
+            {
+              "peer": "relay-2",
+              "group": 2
+            },
+            {
+              "peer": "relay-3",
+              "group": 3
+            }
+          ],
+          "distinct_groups": 4,
+          "proposed_degree": 4
+        },
+        "finney": {
+          "available": true,
+          "observations": [
+            {
+              "wallet": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "nonce": 0,
+              "time": 200,
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1"
+            }
+          ],
+          "conflict": false,
+          "private_block_evidence": null
+        }
+      },
+      "investigation_id": "a5db343e-86cd-4f14-a489-265f35e3ea91",
+      "candidate_id": "298f924acb7c559b8200afcfd9a94096e1aa4f14123448a43acaa50aae2d2ab1",
+      "elapsed_seconds": 1.938
+    },
+    "events": [
+      {
+        "sequence": 1,
+        "candidate": "298f924acb7c559b8200afcfd9a94096e1aa4f14123448a43acaa50aae2d2ab1",
+        "time": "2026-11-23T12:40:40.931704+00:00",
+        "status": "PENDING_INVESTIGATION",
+        "detail": {}
+      },
+      {
+        "sequence": 2,
+        "candidate": "298f924acb7c559b8200afcfd9a94096e1aa4f14123448a43acaa50aae2d2ab1",
+        "time": "2026-11-23T12:40:40.975850+00:00",
+        "status": "UNDER_INVESTIGATION",
+        "detail": {
+          "investigation_id": "a5db343e-86cd-4f14-a489-265f35e3ea91"
+        }
+      },
+      {
+        "sequence": 3,
+        "candidate": "298f924acb7c559b8200afcfd9a94096e1aa4f14123448a43acaa50aae2d2ab1",
+        "time": "2026-11-23T12:40:42.934596+00:00",
+        "status": "AWAITING_ADMIN_REVIEW",
+        "detail": {
+          "investigation_id": "a5db343e-86cd-4f14-a489-265f35e3ea91"
+        }
+      }
+    ]
+  },
+  {
+    "scenario": "sybil",
+    "seed": 41,
+    "synthetic": true,
+    "model_enabled": false,
+    "administrator_decision": null,
+    "report": {
+      "order": [
+        "wallet",
+        "sybil",
+        "eclipse",
+        "finney"
+      ],
+      "planning": {
+        "mode": "evidence_only",
+        "rationale": "No model configured"
+      },
+      "results": {
+        "wallet": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "sybil": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "eclipse": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "finney": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        }
+      },
+      "supervisor_review": {
+        "summary": "Supervisor unavailable",
+        "concerns": [],
+        "request_followup": true
+      },
+      "trust": {
+        "risks": {
+          "sybil": null,
+          "wallet": null,
+          "finney": null,
+          "eclipse": null
+        },
+        "positive_inputs": {
+          "identity": 1.0,
+          "transaction": 1.0,
+          "network": 1.0,
+          "history": 1,
+          "behavior": 0.65625
+        },
+        "missing": [
+          "sybil",
+          "wallet",
+          "finney",
+          "eclipse"
+        ],
+        "missing_positive": [],
+        "supervisor_followup": true,
+        "attack_risk": null,
+        "positive_trust": null,
+        "factor": null,
+        "recommendation": "MORE_EVIDENCE"
+      },
+      "evidence": {
+        "network": {
+          "nodes": [
+            "relay-0",
+            "relay-1",
+            "relay-2",
+            "relay-3",
+            "relay-4",
+            "relay-5",
+            "4809a2d22c186ff567f553981450e40299aadacfe41bea1aea22067956e814de"
+          ],
+          "edges": [
+            {
+              "source": "relay-0",
+              "target": "relay-1",
+              "proposed": false
+            },
+            {
+              "source": "relay-0",
+              "target": "relay-5",
+              "proposed": false
+            },
+            {
+              "source": "relay-0",
+              "target": "4809a2d22c186ff567f553981450e40299aadacfe41bea1aea22067956e814de",
+              "proposed": true
+            },
+            {
+              "source": "relay-1",
+              "target": "relay-2",
+              "proposed": false
+            },
+            {
+              "source": "relay-1",
+              "target": "4809a2d22c186ff567f553981450e40299aadacfe41bea1aea22067956e814de",
+              "proposed": true
+            },
+            {
+              "source": "relay-2",
+              "target": "relay-3",
+              "proposed": false
+            },
+            {
+              "source": "relay-2",
+              "target": "4809a2d22c186ff567f553981450e40299aadacfe41bea1aea22067956e814de",
+              "proposed": true
+            },
+            {
+              "source": "relay-3",
+              "target": "relay-4",
+              "proposed": false
+            },
+            {
+              "source": "relay-3",
+              "target": "4809a2d22c186ff567f553981450e40299aadacfe41bea1aea22067956e814de",
+              "proposed": true
+            },
+            {
+              "source": "relay-4",
+              "target": "relay-5",
+              "proposed": false
+            }
+          ],
+          "replicas_agree": true
+        },
+        "blocks": [
+          {
+            "height": 0,
+            "previous": "b8e1c0cbb41ebce97df46dfcf51a3502c5e198ddb3160f83a49de589e9ae6de4",
+            "timestamp": 0,
+            "transactions": [],
+            "hash": "1085482c512357a1650ed89434840349ef56b0fdef7954e95d073ece17790b94"
+          },
+          {
+            "height": 1,
+            "previous": "1085482c512357a1650ed89434840349ef56b0fdef7954e95d073ece17790b94",
+            "timestamp": 1,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "amount": 20000,
+                "nonce": 0,
+                "timestamp": 1,
+                "signature": "656820a7a39b8526b5e76061e1561c2fd2fb61ae105139dbeaa2161f499c2a7a893aa772aa0b38950e438e126791a8427e6d79675d992cc98b33a64a17968a0f"
+              }
+            ],
+            "hash": "fced56bf697d0f0df0638fd4a1776fc53c67e0e7573feff83057bab90ce2b97d"
+          },
+          {
+            "height": 2,
+            "previous": "fced56bf697d0f0df0638fd4a1776fc53c67e0e7573feff83057bab90ce2b97d",
+            "timestamp": 1,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "4c28598a11814a58e7a2a24279468c246ca8e88e6293748d15380897b23807d4",
+                "amount": 15,
+                "nonce": 1,
+                "timestamp": 1,
+                "signature": "37e08b53f8b464b82c8536ceaeccddd85e09c1e3bb5fde75f559cbd71a0429a4786d18cb96bb232b19ef9461446df497a7cedd25bd89171c499842acf19e9809"
+              }
+            ],
+            "hash": "3974c11b0e8ca797d4a33da5f80aa360608d663e4210ac8d88399a84d6906123"
+          },
+          {
+            "height": 3,
+            "previous": "3974c11b0e8ca797d4a33da5f80aa360608d663e4210ac8d88399a84d6906123",
+            "timestamp": 1,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "f59719f039202ccd8f74287068f4bdd9e2c51fd68d4626a421551c3e1ac8bb73",
+                "amount": 15,
+                "nonce": 2,
+                "timestamp": 1,
+                "signature": "0f4e99c85875acb53486b82845fc70dbf8ae51829ad91820526b4ad105371f16991e771439b0a629d0106751a83d8d5561f091685c89ac5f83687a10f3c77e04"
+              }
+            ],
+            "hash": "d8285e2321a758b7fb590687c96e66c7576aa88bb8c86ae5e262190e785dbda5"
+          },
+          {
+            "height": 4,
+            "previous": "d8285e2321a758b7fb590687c96e66c7576aa88bb8c86ae5e262190e785dbda5",
+            "timestamp": 1,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "c0caff0bb3285e3dbf77addecf081b360e2ac6fb53e7af1970633ac674202eb1",
+                "amount": 15,
+                "nonce": 3,
+                "timestamp": 1,
+                "signature": "5d6e47e39d980b006b4abe07f06d867ae3312fb1cba4c8c2017103b37bb698a034f5d33f435011b11ece6b8ee2aa158cb0ac1121db52e2d86bc86521ff572500"
+              }
+            ],
+            "hash": "ef8ed20f83a1018048979198711a6403ec5b1a5964ca484dedafb46b5bf83e16"
+          },
+          {
+            "height": 5,
+            "previous": "ef8ed20f83a1018048979198711a6403ec5b1a5964ca484dedafb46b5bf83e16",
+            "timestamp": 2,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 9,
+                "nonce": 0,
+                "timestamp": 2,
+                "signature": "6ea907a6e233d99e40c8ddb6d5089a2aba5299ee54ffcfb7949726cf0f97499dda4441abd78f5bfefe1093a127b52cfee7ab68c9cc9da193c55a5c389fb06609"
+              }
+            ],
+            "hash": "c2df98343e3b93ad4d98dc155b59d8eb208897143c84440be01b12aced983a2a"
+          },
+          {
+            "height": 6,
+            "previous": "c2df98343e3b93ad4d98dc155b59d8eb208897143c84440be01b12aced983a2a",
+            "timestamp": 18,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40",
+                "amount": 7,
+                "nonce": 1,
+                "timestamp": 18,
+                "signature": "8256badee5cd2bd98bc7ceefdcacc4a1c75ae5d9c46deebf1f7b1828d64e5f4c351afefc104dfa8ec2810e8704ebba127dc63df5a22752299f7699f229d4ce03"
+              }
+            ],
+            "hash": "10c6a3ec21cf3f673ec9b473475fa6f53a5d23fb81618268a0a12a4f5ba6e59e"
+          },
+          {
+            "height": 7,
+            "previous": "10c6a3ec21cf3f673ec9b473475fa6f53a5d23fb81618268a0a12a4f5ba6e59e",
+            "timestamp": 34,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "caeac59780074dead63a6168504f1cbe0797194a0c0ec2afa295d45e6afa5a99",
+                "amount": 30,
+                "nonce": 2,
+                "timestamp": 34,
+                "signature": "8012889ac139744206ea8c41c95aa4f866cc8232752653bc35822e383137e2808be3a2e1fa523dfc4de97f2bce3318c73b52536d7db2ff96a9a62e514b81a201"
+              }
+            ],
+            "hash": "2536b6a6bda99a4a6c8ddf84ebfed07c0369d767f3cca6a05677add37cfe29b1"
+          },
+          {
+            "height": 8,
+            "previous": "2536b6a6bda99a4a6c8ddf84ebfed07c0369d767f3cca6a05677add37cfe29b1",
+            "timestamp": 50,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "94a5c901623c93c7770eea4962f7fe13af4223fcfac9e1b6981409b9115cd9fb",
+                "amount": 14,
+                "nonce": 3,
+                "timestamp": 50,
+                "signature": "3e1bf334c9e82d99fa2d000f83e73bd61ed98e79c6d3308bf1b81eca2523ffe69330ffd19b55ea0357ffb3bc0d36949608159906903c23a5b114e52899f8e806"
+              }
+            ],
+            "hash": "472b6526cadb2dc70d6019e3f3d1106bb85ef82e21c79974348da3c0cd6e76a0"
+          },
+          {
+            "height": 9,
+            "previous": "472b6526cadb2dc70d6019e3f3d1106bb85ef82e21c79974348da3c0cd6e76a0",
+            "timestamp": 66,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 20,
+                "nonce": 4,
+                "timestamp": 66,
+                "signature": "01b06e909a74ffff1e7f1d5ab645af50258cbb254962eed4ce0d3294892b5da0d61bbc73817b7b931705cbbbe9ea0be9f7cd65a0a69a318f6eab2afe820ec30a"
+              }
+            ],
+            "hash": "46a541fbd87c41b8b154868a6c681ca94dcd888cd33256298252068d9f3b6df5"
+          },
+          {
+            "height": 10,
+            "previous": "46a541fbd87c41b8b154868a6c681ca94dcd888cd33256298252068d9f3b6df5",
+            "timestamp": 82,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40",
+                "amount": 30,
+                "nonce": 5,
+                "timestamp": 82,
+                "signature": "f03bb2b1cc5ab3db47caeddd3de92bd1a6f1f4b5e04a64af8893e71c01e8a1964d2bd6c2fff667f55855e1ac8d8ed3a15a3d6af67141f6b49dc4f9dcf18acd00"
+              }
+            ],
+            "hash": "645e3bcb9fe7fe1cdd6920b7aa68c2c3e602b10a296f90d3a22a37f8a7e1f1cd"
+          },
+          {
+            "height": 11,
+            "previous": "645e3bcb9fe7fe1cdd6920b7aa68c2c3e602b10a296f90d3a22a37f8a7e1f1cd",
+            "timestamp": 98,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "caeac59780074dead63a6168504f1cbe0797194a0c0ec2afa295d45e6afa5a99",
+                "amount": 24,
+                "nonce": 6,
+                "timestamp": 98,
+                "signature": "91682e3fef0af7a647097df3e803450b067b07d4882be24ea6bfc7034348d3718632afa12f0a81dea71409c07c88677d0146103c5521c5a6d5d1b6868ea08403"
+              }
+            ],
+            "hash": "8cac3c84798003d13482809f3ad9ec49b6852a7b3f13e06a24129e3df95c4388"
+          }
+        ],
+        "wallet": {
+          "available": true,
+          "history": [
+            {
+              "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+              "recipient": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "amount": 20000,
+              "nonce": 0,
+              "timestamp": 1,
+              "signature": "656820a7a39b8526b5e76061e1561c2fd2fb61ae105139dbeaa2161f499c2a7a893aa772aa0b38950e438e126791a8427e6d79675d992cc98b33a64a17968a0f"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 9,
+              "nonce": 0,
+              "timestamp": 2,
+              "signature": "6ea907a6e233d99e40c8ddb6d5089a2aba5299ee54ffcfb7949726cf0f97499dda4441abd78f5bfefe1093a127b52cfee7ab68c9cc9da193c55a5c389fb06609"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40",
+              "amount": 7,
+              "nonce": 1,
+              "timestamp": 18,
+              "signature": "8256badee5cd2bd98bc7ceefdcacc4a1c75ae5d9c46deebf1f7b1828d64e5f4c351afefc104dfa8ec2810e8704ebba127dc63df5a22752299f7699f229d4ce03"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "caeac59780074dead63a6168504f1cbe0797194a0c0ec2afa295d45e6afa5a99",
+              "amount": 30,
+              "nonce": 2,
+              "timestamp": 34,
+              "signature": "8012889ac139744206ea8c41c95aa4f866cc8232752653bc35822e383137e2808be3a2e1fa523dfc4de97f2bce3318c73b52536d7db2ff96a9a62e514b81a201"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "94a5c901623c93c7770eea4962f7fe13af4223fcfac9e1b6981409b9115cd9fb",
+              "amount": 14,
+              "nonce": 3,
+              "timestamp": 50,
+              "signature": "3e1bf334c9e82d99fa2d000f83e73bd61ed98e79c6d3308bf1b81eca2523ffe69330ffd19b55ea0357ffb3bc0d36949608159906903c23a5b114e52899f8e806"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 20,
+              "nonce": 4,
+              "timestamp": 66,
+              "signature": "01b06e909a74ffff1e7f1d5ab645af50258cbb254962eed4ce0d3294892b5da0d61bbc73817b7b931705cbbbe9ea0be9f7cd65a0a69a318f6eab2afe820ec30a"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40",
+              "amount": 30,
+              "nonce": 5,
+              "timestamp": 82,
+              "signature": "f03bb2b1cc5ab3db47caeddd3de92bd1a6f1f4b5e04a64af8893e71c01e8a1964d2bd6c2fff667f55855e1ac8d8ed3a15a3d6af67141f6b49dc4f9dcf18acd00"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "caeac59780074dead63a6168504f1cbe0797194a0c0ec2afa295d45e6afa5a99",
+              "amount": 24,
+              "nonce": 6,
+              "timestamp": 98,
+              "signature": "91682e3fef0af7a647097df3e803450b067b07d4882be24ea6bfc7034348d3718632afa12f0a81dea71409c07c88677d0146103c5521c5a6d5d1b6868ea08403"
+            }
+          ],
+          "balance": 19866,
+          "model": {
+            "features": {
+              "count": 7,
+              "mean_amount": 19.142857142857142,
+              "counterparties": 4,
+              "frequency": 0.07291666666666667
+            },
+            "isolation_score": -0.47527763802302986,
+            "lower_tail_percentile": 0.65625,
+            "training_size": 160
+          }
+        },
+        "sybil": {
+          "available": true,
+          "funders": [
+            "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a"
+          ],
+          "observed_identities": [
+            {
+              "node_id": "8b93f65b3442c4dff31673c4e39a2bb2cd3ee0e6b37637e2cbc90abac4fb4107",
+              "wallet": "4c28598a11814a58e7a2a24279468c246ca8e88e6293748d15380897b23807d4",
+              "first_seen": 1
+            },
+            {
+              "node_id": "c16e76d91f3d3712e5e77b79e80a5c6bff400a487ed31e79f54e0b3998997ccc",
+              "wallet": "f59719f039202ccd8f74287068f4bdd9e2c51fd68d4626a421551c3e1ac8bb73",
+              "first_seen": 1
+            },
+            {
+              "node_id": "8a866cc928a441d21f07ed12e6a16259c27f5347e334b051b8473c67db50d0bb",
+              "wallet": "c0caff0bb3285e3dbf77addecf081b360e2ac6fb53e7af1970633ac674202eb1",
+              "first_seen": 1
+            }
+          ],
+          "same_timestamp_recipients": [
+            "4c28598a11814a58e7a2a24279468c246ca8e88e6293748d15380897b23807d4",
+            "f59719f039202ccd8f74287068f4bdd9e2c51fd68d4626a421551c3e1ac8bb73",
+            "c0caff0bb3285e3dbf77addecf081b360e2ac6fb53e7af1970633ac674202eb1"
+          ]
+        },
+        "eclipse": {
+          "available": true,
+          "observations": [
+            {
+              "peer": "relay-0",
+              "group": 0
+            },
+            {
+              "peer": "relay-1",
+              "group": 1
+            },
+            {
+              "peer": "relay-2",
+              "group": 2
+            },
+            {
+              "peer": "relay-3",
+              "group": 3
+            }
+          ],
+          "distinct_groups": 4,
+          "proposed_degree": 4
+        },
+        "finney": {
+          "available": true,
+          "observations": [
+            {
+              "wallet": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "nonce": 0,
+              "time": 200,
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1"
+            }
+          ],
+          "conflict": false,
+          "private_block_evidence": null
+        }
+      },
+      "investigation_id": "7a3b104d-bc3d-448e-9dfe-29d3e862cf94",
+      "candidate_id": "4809a2d22c186ff567f553981450e40299aadacfe41bea1aea22067956e814de",
+      "elapsed_seconds": 0.351
+    },
+    "events": [
+      {
+        "sequence": 4,
+        "candidate": "4809a2d22c186ff567f553981450e40299aadacfe41bea1aea22067956e814de",
+        "time": "2026-11-23T12:40:42.953895+00:00",
+        "status": "PENDING_INVESTIGATION",
+        "detail": {}
+      },
+      {
+        "sequence": 5,
+        "candidate": "4809a2d22c186ff567f553981450e40299aadacfe41bea1aea22067956e814de",
+        "time": "2026-11-23T12:40:42.971208+00:00",
+        "status": "UNDER_INVESTIGATION",
+        "detail": {
+          "investigation_id": "7a3b104d-bc3d-448e-9dfe-29d3e862cf94"
+        }
+      },
+      {
+        "sequence": 6,
+        "candidate": "4809a2d22c186ff567f553981450e40299aadacfe41bea1aea22067956e814de",
+        "time": "2026-11-23T12:40:43.332506+00:00",
+        "status": "AWAITING_ADMIN_REVIEW",
+        "detail": {
+          "investigation_id": "7a3b104d-bc3d-448e-9dfe-29d3e862cf94"
+        }
+      }
+    ]
+  },
+  {
+    "scenario": "eclipse",
+    "seed": 41,
+    "synthetic": true,
+    "model_enabled": false,
+    "administrator_decision": null,
+    "report": {
+      "order": [
+        "wallet",
+        "sybil",
+        "eclipse",
+        "finney"
+      ],
+      "planning": {
+        "mode": "evidence_only",
+        "rationale": "No model configured"
+      },
+      "results": {
+        "wallet": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "sybil": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "eclipse": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "finney": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        }
+      },
+      "supervisor_review": {
+        "summary": "Supervisor unavailable",
+        "concerns": [],
+        "request_followup": true
+      },
+      "trust": {
+        "risks": {
+          "sybil": null,
+          "wallet": null,
+          "finney": null,
+          "eclipse": null
+        },
+        "positive_inputs": {
+          "identity": 1.0,
+          "transaction": 1.0,
+          "network": 0.25,
+          "history": 1,
+          "behavior": 0.65625
+        },
+        "missing": [
+          "sybil",
+          "wallet",
+          "finney",
+          "eclipse"
+        ],
+        "missing_positive": [],
+        "supervisor_followup": true,
+        "attack_risk": null,
+        "positive_trust": null,
+        "factor": null,
+        "recommendation": "MORE_EVIDENCE"
+      },
+      "evidence": {
+        "network": {
+          "nodes": [
+            "relay-0",
+            "relay-1",
+            "relay-2",
+            "relay-3",
+            "relay-4",
+            "relay-5",
+            "a8fd57560e193d907514ccd996a559437c4799b66d1405f210d9530d8e8ba749"
+          ],
+          "edges": [
+            {
+              "source": "relay-0",
+              "target": "relay-1",
+              "proposed": false
+            },
+            {
+              "source": "relay-0",
+              "target": "relay-5",
+              "proposed": false
+            },
+            {
+              "source": "relay-0",
+              "target": "a8fd57560e193d907514ccd996a559437c4799b66d1405f210d9530d8e8ba749",
+              "proposed": true
+            },
+            {
+              "source": "relay-1",
+              "target": "relay-2",
+              "proposed": false
+            },
+            {
+              "source": "relay-1",
+              "target": "a8fd57560e193d907514ccd996a559437c4799b66d1405f210d9530d8e8ba749",
+              "proposed": true
+            },
+            {
+              "source": "relay-2",
+              "target": "relay-3",
+              "proposed": false
+            },
+            {
+              "source": "relay-2",
+              "target": "a8fd57560e193d907514ccd996a559437c4799b66d1405f210d9530d8e8ba749",
+              "proposed": true
+            },
+            {
+              "source": "relay-3",
+              "target": "relay-4",
+              "proposed": false
+            },
+            {
+              "source": "relay-3",
+              "target": "a8fd57560e193d907514ccd996a559437c4799b66d1405f210d9530d8e8ba749",
+              "proposed": true
+            },
+            {
+              "source": "relay-4",
+              "target": "relay-5",
+              "proposed": false
+            }
+          ],
+          "replicas_agree": true
+        },
+        "blocks": [
+          {
+            "height": 0,
+            "previous": "b8e1c0cbb41ebce97df46dfcf51a3502c5e198ddb3160f83a49de589e9ae6de4",
+            "timestamp": 0,
+            "transactions": [],
+            "hash": "1085482c512357a1650ed89434840349ef56b0fdef7954e95d073ece17790b94"
+          },
+          {
+            "height": 1,
+            "previous": "1085482c512357a1650ed89434840349ef56b0fdef7954e95d073ece17790b94",
+            "timestamp": 1,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "amount": 20000,
+                "nonce": 0,
+                "timestamp": 1,
+                "signature": "656820a7a39b8526b5e76061e1561c2fd2fb61ae105139dbeaa2161f499c2a7a893aa772aa0b38950e438e126791a8427e6d79675d992cc98b33a64a17968a0f"
+              }
+            ],
+            "hash": "fced56bf697d0f0df0638fd4a1776fc53c67e0e7573feff83057bab90ce2b97d"
+          },
+          {
+            "height": 2,
+            "previous": "fced56bf697d0f0df0638fd4a1776fc53c67e0e7573feff83057bab90ce2b97d",
+            "timestamp": 2,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 9,
+                "nonce": 0,
+                "timestamp": 2,
+                "signature": "6ea907a6e233d99e40c8ddb6d5089a2aba5299ee54ffcfb7949726cf0f97499dda4441abd78f5bfefe1093a127b52cfee7ab68c9cc9da193c55a5c389fb06609"
+              }
+            ],
+            "hash": "674b4bbd82bb3206caa9652c212fbafacea50f92d1367daf22262b0a4c22d87e"
+          },
+          {
+            "height": 3,
+            "previous": "674b4bbd82bb3206caa9652c212fbafacea50f92d1367daf22262b0a4c22d87e",
+            "timestamp": 18,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40",
+                "amount": 7,
+                "nonce": 1,
+                "timestamp": 18,
+                "signature": "8256badee5cd2bd98bc7ceefdcacc4a1c75ae5d9c46deebf1f7b1828d64e5f4c351afefc104dfa8ec2810e8704ebba127dc63df5a22752299f7699f229d4ce03"
+              }
+            ],
+            "hash": "70664afc33ab2b44c28bc2e5dda6b1324c71139225b4fc2bc16a35fef16dcefd"
+          },
+          {
+            "height": 4,
+            "previous": "70664afc33ab2b44c28bc2e5dda6b1324c71139225b4fc2bc16a35fef16dcefd",
+            "timestamp": 25,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "4c28598a11814a58e7a2a24279468c246ca8e88e6293748d15380897b23807d4",
+                "amount": 15,
+                "nonce": 1,
+                "timestamp": 25,
+                "signature": "45061f6c1b65f9e925855a8524b29bee58f898001cef38e0891068bff8a520e5be05fdd735d1fc86d2efa3bdc7d8228d795b1f4d90e72b3c3dbd9cfd17689809"
+              }
+            ],
+            "hash": "3521b9c453cb24fd2f3a29c4c31eb8051c9aff10366836b74eb04f47ba06f073"
+          },
+          {
+            "height": 5,
+            "previous": "3521b9c453cb24fd2f3a29c4c31eb8051c9aff10366836b74eb04f47ba06f073",
+            "timestamp": 26,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "f59719f039202ccd8f74287068f4bdd9e2c51fd68d4626a421551c3e1ac8bb73",
+                "amount": 15,
+                "nonce": 2,
+                "timestamp": 26,
+                "signature": "6c1bfdba7e9696197c5280fbf3e0ef6df79d6f6490dcab2ee9f25a2aa188d568e0dc3b25cad527974ef6233f10e8194dec0480169dd6a8d3ccfd1331d386ce00"
+              }
+            ],
+            "hash": "d97394f8dbdd1c142e8e4bb4ed2fe5ca3066c5f4d1581f4a7479e6c4c018a424"
+          },
+          {
+            "height": 6,
+            "previous": "d97394f8dbdd1c142e8e4bb4ed2fe5ca3066c5f4d1581f4a7479e6c4c018a424",
+            "timestamp": 27,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "c0caff0bb3285e3dbf77addecf081b360e2ac6fb53e7af1970633ac674202eb1",
+                "amount": 15,
+                "nonce": 3,
+                "timestamp": 27,
+                "signature": "9426b750debee42ace20818aa4aa0b57e18f066b62dcbb736ffaf247a96cb8066cf70ab1f1bfc8b1c02ff8a5c32d2609cbc98a1cdaa3763dbec338aafa63ba0e"
+              }
+            ],
+            "hash": "bfb92baf542c2c145f8ea2b522aeda6ab1d815b8ac0a3e97ac2f979a505aedd7"
+          },
+          {
+            "height": 7,
+            "previous": "bfb92baf542c2c145f8ea2b522aeda6ab1d815b8ac0a3e97ac2f979a505aedd7",
+            "timestamp": 34,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "caeac59780074dead63a6168504f1cbe0797194a0c0ec2afa295d45e6afa5a99",
+                "amount": 30,
+                "nonce": 2,
+                "timestamp": 34,
+                "signature": "8012889ac139744206ea8c41c95aa4f866cc8232752653bc35822e383137e2808be3a2e1fa523dfc4de97f2bce3318c73b52536d7db2ff96a9a62e514b81a201"
+              }
+            ],
+            "hash": "783982849bbca18e2b52bfde56318ce82133fb6b0584fd606b0dcc7c4e495d23"
+          },
+          {
+            "height": 8,
+            "previous": "783982849bbca18e2b52bfde56318ce82133fb6b0584fd606b0dcc7c4e495d23",
+            "timestamp": 50,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "94a5c901623c93c7770eea4962f7fe13af4223fcfac9e1b6981409b9115cd9fb",
+                "amount": 14,
+                "nonce": 3,
+                "timestamp": 50,
+                "signature": "3e1bf334c9e82d99fa2d000f83e73bd61ed98e79c6d3308bf1b81eca2523ffe69330ffd19b55ea0357ffb3bc0d36949608159906903c23a5b114e52899f8e806"
+              }
+            ],
+            "hash": "53875a6a71d65ef7ecb970f878013f826bdb8cfe1e05fe1d9e710c46e14d9bc0"
+          },
+          {
+            "height": 9,
+            "previous": "53875a6a71d65ef7ecb970f878013f826bdb8cfe1e05fe1d9e710c46e14d9bc0",
+            "timestamp": 66,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 20,
+                "nonce": 4,
+                "timestamp": 66,
+                "signature": "01b06e909a74ffff1e7f1d5ab645af50258cbb254962eed4ce0d3294892b5da0d61bbc73817b7b931705cbbbe9ea0be9f7cd65a0a69a318f6eab2afe820ec30a"
+              }
+            ],
+            "hash": "1cd3b7293ac934e7bc27e94dd926cb029d7214e7252547cb3b2cee4f175fcfb0"
+          },
+          {
+            "height": 10,
+            "previous": "1cd3b7293ac934e7bc27e94dd926cb029d7214e7252547cb3b2cee4f175fcfb0",
+            "timestamp": 82,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40",
+                "amount": 30,
+                "nonce": 5,
+                "timestamp": 82,
+                "signature": "f03bb2b1cc5ab3db47caeddd3de92bd1a6f1f4b5e04a64af8893e71c01e8a1964d2bd6c2fff667f55855e1ac8d8ed3a15a3d6af67141f6b49dc4f9dcf18acd00"
+              }
+            ],
+            "hash": "8b087c99cc3ab40c6702b6d48bdec6579971ef14485edfeeee4cbdd55f0ba900"
+          },
+          {
+            "height": 11,
+            "previous": "8b087c99cc3ab40c6702b6d48bdec6579971ef14485edfeeee4cbdd55f0ba900",
+            "timestamp": 98,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "caeac59780074dead63a6168504f1cbe0797194a0c0ec2afa295d45e6afa5a99",
+                "amount": 24,
+                "nonce": 6,
+                "timestamp": 98,
+                "signature": "91682e3fef0af7a647097df3e803450b067b07d4882be24ea6bfc7034348d3718632afa12f0a81dea71409c07c88677d0146103c5521c5a6d5d1b6868ea08403"
+              }
+            ],
+            "hash": "834f23370532497977e4effd35026433003474c32771012ecfc57b82bdbd7cf7"
+          }
+        ],
+        "wallet": {
+          "available": true,
+          "history": [
+            {
+              "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+              "recipient": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "amount": 20000,
+              "nonce": 0,
+              "timestamp": 1,
+              "signature": "656820a7a39b8526b5e76061e1561c2fd2fb61ae105139dbeaa2161f499c2a7a893aa772aa0b38950e438e126791a8427e6d79675d992cc98b33a64a17968a0f"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 9,
+              "nonce": 0,
+              "timestamp": 2,
+              "signature": "6ea907a6e233d99e40c8ddb6d5089a2aba5299ee54ffcfb7949726cf0f97499dda4441abd78f5bfefe1093a127b52cfee7ab68c9cc9da193c55a5c389fb06609"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40",
+              "amount": 7,
+              "nonce": 1,
+              "timestamp": 18,
+              "signature": "8256badee5cd2bd98bc7ceefdcacc4a1c75ae5d9c46deebf1f7b1828d64e5f4c351afefc104dfa8ec2810e8704ebba127dc63df5a22752299f7699f229d4ce03"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "caeac59780074dead63a6168504f1cbe0797194a0c0ec2afa295d45e6afa5a99",
+              "amount": 30,
+              "nonce": 2,
+              "timestamp": 34,
+              "signature": "8012889ac139744206ea8c41c95aa4f866cc8232752653bc35822e383137e2808be3a2e1fa523dfc4de97f2bce3318c73b52536d7db2ff96a9a62e514b81a201"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "94a5c901623c93c7770eea4962f7fe13af4223fcfac9e1b6981409b9115cd9fb",
+              "amount": 14,
+              "nonce": 3,
+              "timestamp": 50,
+              "signature": "3e1bf334c9e82d99fa2d000f83e73bd61ed98e79c6d3308bf1b81eca2523ffe69330ffd19b55ea0357ffb3bc0d36949608159906903c23a5b114e52899f8e806"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 20,
+              "nonce": 4,
+              "timestamp": 66,
+              "signature": "01b06e909a74ffff1e7f1d5ab645af50258cbb254962eed4ce0d3294892b5da0d61bbc73817b7b931705cbbbe9ea0be9f7cd65a0a69a318f6eab2afe820ec30a"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40",
+              "amount": 30,
+              "nonce": 5,
+              "timestamp": 82,
+              "signature": "f03bb2b1cc5ab3db47caeddd3de92bd1a6f1f4b5e04a64af8893e71c01e8a1964d2bd6c2fff667f55855e1ac8d8ed3a15a3d6af67141f6b49dc4f9dcf18acd00"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "caeac59780074dead63a6168504f1cbe0797194a0c0ec2afa295d45e6afa5a99",
+              "amount": 24,
+              "nonce": 6,
+              "timestamp": 98,
+              "signature": "91682e3fef0af7a647097df3e803450b067b07d4882be24ea6bfc7034348d3718632afa12f0a81dea71409c07c88677d0146103c5521c5a6d5d1b6868ea08403"
+            }
+          ],
+          "balance": 19866,
+          "model": {
+            "features": {
+              "count": 7,
+              "mean_amount": 19.142857142857142,
+              "counterparties": 4,
+              "frequency": 0.07291666666666667
+            },
+            "isolation_score": -0.47527763802302986,
+            "lower_tail_percentile": 0.65625,
+            "training_size": 160
+          }
+        },
+        "sybil": {
+          "available": true,
+          "funders": [
+            "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a"
+          ],
+          "observed_identities": [
+            {
+              "node_id": "8b93f65b3442c4dff31673c4e39a2bb2cd3ee0e6b37637e2cbc90abac4fb4107",
+              "wallet": "4c28598a11814a58e7a2a24279468c246ca8e88e6293748d15380897b23807d4",
+              "first_seen": 25
+            },
+            {
+              "node_id": "c16e76d91f3d3712e5e77b79e80a5c6bff400a487ed31e79f54e0b3998997ccc",
+              "wallet": "f59719f039202ccd8f74287068f4bdd9e2c51fd68d4626a421551c3e1ac8bb73",
+              "first_seen": 26
+            },
+            {
+              "node_id": "8a866cc928a441d21f07ed12e6a16259c27f5347e334b051b8473c67db50d0bb",
+              "wallet": "c0caff0bb3285e3dbf77addecf081b360e2ac6fb53e7af1970633ac674202eb1",
+              "first_seen": 27
+            }
+          ],
+          "same_timestamp_recipients": []
+        },
+        "eclipse": {
+          "available": true,
+          "observations": [
+            {
+              "peer": "relay-0",
+              "group": 0
+            },
+            {
+              "peer": "relay-1",
+              "group": 0
+            },
+            {
+              "peer": "relay-2",
+              "group": 0
+            },
+            {
+              "peer": "relay-3",
+              "group": 0
+            }
+          ],
+          "distinct_groups": 1,
+          "proposed_degree": 4
+        },
+        "finney": {
+          "available": true,
+          "observations": [
+            {
+              "wallet": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "nonce": 0,
+              "time": 200,
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1"
+            }
+          ],
+          "conflict": false,
+          "private_block_evidence": null
+        }
+      },
+      "investigation_id": "f06d9a8c-edc4-425c-b381-3189d20bd86f",
+      "candidate_id": "a8fd57560e193d907514ccd996a559437c4799b66d1405f210d9530d8e8ba749",
+      "elapsed_seconds": 0.385
+    },
+    "events": [
+      {
+        "sequence": 7,
+        "candidate": "a8fd57560e193d907514ccd996a559437c4799b66d1405f210d9530d8e8ba749",
+        "time": "2026-11-23T12:40:43.351143+00:00",
+        "status": "PENDING_INVESTIGATION",
+        "detail": {}
+      },
+      {
+        "sequence": 8,
+        "candidate": "a8fd57560e193d907514ccd996a559437c4799b66d1405f210d9530d8e8ba749",
+        "time": "2026-11-23T12:40:43.370698+00:00",
+        "status": "UNDER_INVESTIGATION",
+        "detail": {
+          "investigation_id": "f06d9a8c-edc4-425c-b381-3189d20bd86f"
+        }
+      },
+      {
+        "sequence": 9,
+        "candidate": "a8fd57560e193d907514ccd996a559437c4799b66d1405f210d9530d8e8ba749",
+        "time": "2026-11-23T12:40:43.766781+00:00",
+        "status": "AWAITING_ADMIN_REVIEW",
+        "detail": {
+          "investigation_id": "f06d9a8c-edc4-425c-b381-3189d20bd86f"
+        }
+      }
+    ]
+  },
+  {
+    "scenario": "wallet",
+    "seed": 41,
+    "synthetic": true,
+    "model_enabled": false,
+    "administrator_decision": null,
+    "report": {
+      "order": [
+        "wallet",
+        "sybil",
+        "eclipse",
+        "finney"
+      ],
+      "planning": {
+        "mode": "evidence_only",
+        "rationale": "No model configured"
+      },
+      "results": {
+        "wallet": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "sybil": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "eclipse": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "finney": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        }
+      },
+      "supervisor_review": {
+        "summary": "Supervisor unavailable",
+        "concerns": [],
+        "request_followup": true
+      },
+      "trust": {
+        "risks": {
+          "sybil": null,
+          "wallet": null,
+          "finney": null,
+          "eclipse": null
+        },
+        "positive_inputs": {
+          "identity": 1.0,
+          "transaction": 1.0,
+          "network": 1.0,
+          "history": 1,
+          "behavior": 0.0
+        },
+        "missing": [
+          "sybil",
+          "wallet",
+          "finney",
+          "eclipse"
+        ],
+        "missing_positive": [],
+        "supervisor_followup": true,
+        "attack_risk": null,
+        "positive_trust": null,
+        "factor": null,
+        "recommendation": "MORE_EVIDENCE"
+      },
+      "evidence": {
+        "network": {
+          "nodes": [
+            "relay-0",
+            "relay-1",
+            "relay-2",
+            "relay-3",
+            "relay-4",
+            "relay-5",
+            "e88510c172d619e9063ff1cf0e059bf97b183786f1fc0c6d0e828761e89c8195"
+          ],
+          "edges": [
+            {
+              "source": "relay-0",
+              "target": "relay-1",
+              "proposed": false
+            },
+            {
+              "source": "relay-0",
+              "target": "relay-5",
+              "proposed": false
+            },
+            {
+              "source": "relay-0",
+              "target": "e88510c172d619e9063ff1cf0e059bf97b183786f1fc0c6d0e828761e89c8195",
+              "proposed": true
+            },
+            {
+              "source": "relay-1",
+              "target": "relay-2",
+              "proposed": false
+            },
+            {
+              "source": "relay-1",
+              "target": "e88510c172d619e9063ff1cf0e059bf97b183786f1fc0c6d0e828761e89c8195",
+              "proposed": true
+            },
+            {
+              "source": "relay-2",
+              "target": "relay-3",
+              "proposed": false
+            },
+            {
+              "source": "relay-2",
+              "target": "e88510c172d619e9063ff1cf0e059bf97b183786f1fc0c6d0e828761e89c8195",
+              "proposed": true
+            },
+            {
+              "source": "relay-3",
+              "target": "relay-4",
+              "proposed": false
+            },
+            {
+              "source": "relay-3",
+              "target": "e88510c172d619e9063ff1cf0e059bf97b183786f1fc0c6d0e828761e89c8195",
+              "proposed": true
+            },
+            {
+              "source": "relay-4",
+              "target": "relay-5",
+              "proposed": false
+            }
+          ],
+          "replicas_agree": true
+        },
+        "blocks": [
+          {
+            "height": 0,
+            "previous": "b8e1c0cbb41ebce97df46dfcf51a3502c5e198ddb3160f83a49de589e9ae6de4",
+            "timestamp": 0,
+            "transactions": [],
+            "hash": "1085482c512357a1650ed89434840349ef56b0fdef7954e95d073ece17790b94"
+          },
+          {
+            "height": 1,
+            "previous": "1085482c512357a1650ed89434840349ef56b0fdef7954e95d073ece17790b94",
+            "timestamp": 1,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "amount": 20000,
+                "nonce": 0,
+                "timestamp": 1,
+                "signature": "656820a7a39b8526b5e76061e1561c2fd2fb61ae105139dbeaa2161f499c2a7a893aa772aa0b38950e438e126791a8427e6d79675d992cc98b33a64a17968a0f"
+              }
+            ],
+            "hash": "fced56bf697d0f0df0638fd4a1776fc53c67e0e7573feff83057bab90ce2b97d"
+          },
+          {
+            "height": 2,
+            "previous": "fced56bf697d0f0df0638fd4a1776fc53c67e0e7573feff83057bab90ce2b97d",
+            "timestamp": 2,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 0,
+                "timestamp": 2,
+                "signature": "097ce5988a8473c6f0c0cb5793893c457629f4db2eaef319c0bda7bc0f55b56098e781270da370fd00622efb235682edc2544977deda8ee0ed790c9dfe145207"
+              }
+            ],
+            "hash": "8ce04bba186cfc2c93a1f20d5e3bc48618e1d89f8d545ce770612b6406e5f191"
+          },
+          {
+            "height": 3,
+            "previous": "8ce04bba186cfc2c93a1f20d5e3bc48618e1d89f8d545ce770612b6406e5f191",
+            "timestamp": 3,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 1,
+                "timestamp": 3,
+                "signature": "eca3dd41ee15c95b4ae59dd56d59916966aa11a9388f786e368350d734d9c4f46701517b12c275c96cf8c3edb302e873ab26404e92639d0ac68909d286e8b703"
+              }
+            ],
+            "hash": "359409c599c9bb98922677cd27beaab523df9a079b54ad6d2258570f09482ed8"
+          },
+          {
+            "height": 4,
+            "previous": "359409c599c9bb98922677cd27beaab523df9a079b54ad6d2258570f09482ed8",
+            "timestamp": 4,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 2,
+                "timestamp": 4,
+                "signature": "dd1ce7ca181dbd1321597fc33c0fbe6d192f7e02deeed7ca6b538ba3772105657c543144432114e35788279e166a1b73d559f14c41b75a6e619013d34a10f208"
+              }
+            ],
+            "hash": "d4e81b0ca4eef66cf08107f99567a77972ae95caebc262d2a39dfa8228b58b57"
+          },
+          {
+            "height": 5,
+            "previous": "d4e81b0ca4eef66cf08107f99567a77972ae95caebc262d2a39dfa8228b58b57",
+            "timestamp": 5,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 3,
+                "timestamp": 5,
+                "signature": "75f57ef2bb505dd6730f83840d9c4d88135302ddf1cdb6568695bb755e3e108ed35c6fb898725ad40d16c5613d4ad5b1a92f088840feb524c909acd9fb44820b"
+              }
+            ],
+            "hash": "00877086a56cc33314a17211a40e65740240458ce5e5c8c7749cfb06a99d34d1"
+          },
+          {
+            "height": 6,
+            "previous": "00877086a56cc33314a17211a40e65740240458ce5e5c8c7749cfb06a99d34d1",
+            "timestamp": 6,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 4,
+                "timestamp": 6,
+                "signature": "0fe99ef415ed8c4cb4f801cc0320e1bbb41225e9c098aca9601d9fcbed216c62b1ce683966608274df0f772fe112366881130b9be3d585486a2002de7f09440d"
+              }
+            ],
+            "hash": "87f99503d8b6b3bfb6d7b61a2553fccee65dd1b11f62f1a4f79bd189e7e1c8ee"
+          },
+          {
+            "height": 7,
+            "previous": "87f99503d8b6b3bfb6d7b61a2553fccee65dd1b11f62f1a4f79bd189e7e1c8ee",
+            "timestamp": 7,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 5,
+                "timestamp": 7,
+                "signature": "ec2911c69f2ce3b68f27a31017ba84b6e40fcb63dbcf0f995dc94cb12bbd794fb60244d49adfe584292ceaa4c8b3b6e9cd19cd427d4af77f414c65d64af5ea03"
+              }
+            ],
+            "hash": "3d29f913b1aed49c775e785ee39d9594423a5e521fe92e31832250379254db53"
+          },
+          {
+            "height": 8,
+            "previous": "3d29f913b1aed49c775e785ee39d9594423a5e521fe92e31832250379254db53",
+            "timestamp": 8,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 6,
+                "timestamp": 8,
+                "signature": "9a98090ddeacb0ced475eb1b5a07ad37d65c7ec7fdf140279229ea7c95ce4b79c549b8b9ec3aab89a37522ab7875ee5ea86e0ed9203fceab5d036705cb040f08"
+              }
+            ],
+            "hash": "9de524d134a9fda0e84131b8bb7fc7de81b6ef1bfb2e303185b8852c914c1453"
+          },
+          {
+            "height": 9,
+            "previous": "9de524d134a9fda0e84131b8bb7fc7de81b6ef1bfb2e303185b8852c914c1453",
+            "timestamp": 9,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 7,
+                "timestamp": 9,
+                "signature": "c607703700b79c616d28e94b3021e408212c6ded292928fd9938b54e12cd58744f47528b9b5db85637fb2ceb130786598296dae25fb9a935df510a35b291aa0a"
+              }
+            ],
+            "hash": "4655e0a1ebf0dc696f843d3b052a1e85946b3d5241778a16cb22c978972045aa"
+          },
+          {
+            "height": 10,
+            "previous": "4655e0a1ebf0dc696f843d3b052a1e85946b3d5241778a16cb22c978972045aa",
+            "timestamp": 10,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 8,
+                "timestamp": 10,
+                "signature": "a8200c48eb650314271f299dca26036bcbf0ad6ad8c93fd064c9b45f73e6306a4398cc39fd0ddf400cf7146cd4b9f4d17004e4fcac10093906f7df0d82e7f80e"
+              }
+            ],
+            "hash": "fbe8ce0ef884b1458d8436af7e993b97ab05a8da6850df98cfdc1b622b3f33e3"
+          },
+          {
+            "height": 11,
+            "previous": "fbe8ce0ef884b1458d8436af7e993b97ab05a8da6850df98cfdc1b622b3f33e3",
+            "timestamp": 11,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 9,
+                "timestamp": 11,
+                "signature": "f78cb5144eac1c5d9bf945b141fec817462ef37af8e37a68e00e40113fa14b6a51637e493ac93c654f087ae0c7672aad8f7afbcde5f2f5fee3d3477a32db8503"
+              }
+            ],
+            "hash": "7310e95657116b5deeb43848e7f963a1b737d91b06d29f11077ffec81c98217b"
+          },
+          {
+            "height": 12,
+            "previous": "7310e95657116b5deeb43848e7f963a1b737d91b06d29f11077ffec81c98217b",
+            "timestamp": 12,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 10,
+                "timestamp": 12,
+                "signature": "c7949a84a198a4244d0c23963791e45d50897d00a41c2c28d7771440368230d403b9d0ab7364df37a934cd0bf9622e10d1da4faf69efd71069876a12a8758a09"
+              }
+            ],
+            "hash": "95c99be53b3a9f0d15007e1fbd0b9a94a2edcabf32837a7b19b37cafd454bfd3"
+          },
+          {
+            "height": 13,
+            "previous": "95c99be53b3a9f0d15007e1fbd0b9a94a2edcabf32837a7b19b37cafd454bfd3",
+            "timestamp": 13,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 11,
+                "timestamp": 13,
+                "signature": "5a5f177ed51202b81ae418f8a5c7a9d125c6dcb5942e602e55db91301873f4b572d080c769127b11458cffd4e342c9d0b58037f285fcfad05b2adbe02a6cd20b"
+              }
+            ],
+            "hash": "d07e299fdea9be4f10a9558dcca7d293ba17fa7a533641ea3567a32e4d0dfef5"
+          },
+          {
+            "height": 14,
+            "previous": "d07e299fdea9be4f10a9558dcca7d293ba17fa7a533641ea3567a32e4d0dfef5",
+            "timestamp": 14,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 12,
+                "timestamp": 14,
+                "signature": "9a2694f6a55223c6752b822c6defadcdd015deb1926f6f82b791bccf611fd9e8bc8762422e21e7958fe67f34c3c626c0139f09727721df3f0ac1b2c89f0be607"
+              }
+            ],
+            "hash": "fe4e7bb2cc7a69c1c8692ad9583fa11d512df0084596c9d125d9a9d9ebdffcf8"
+          },
+          {
+            "height": 15,
+            "previous": "fe4e7bb2cc7a69c1c8692ad9583fa11d512df0084596c9d125d9a9d9ebdffcf8",
+            "timestamp": 15,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 13,
+                "timestamp": 15,
+                "signature": "398a9274d5d0e345e31e72e32674cef90ac6488d684efad6592369f8175b88e8130ff79fe397d80b6b11b40e99e6de6d403a7cd80afa292757bbbdd9bf2fc505"
+              }
+            ],
+            "hash": "e612cb8bb01f30df3e64d729a0a2299024db83b7c6e7589d77b231cac389387d"
+          },
+          {
+            "height": 16,
+            "previous": "e612cb8bb01f30df3e64d729a0a2299024db83b7c6e7589d77b231cac389387d",
+            "timestamp": 16,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 14,
+                "timestamp": 16,
+                "signature": "de0131c246615e1ac73e6ed9f20e10d738d7cead597a9da40585d19ff3ace8d52167ce5a9013682e06d2dd4d7d8539307607cac84a51b7ec58d76c90ad40d505"
+              }
+            ],
+            "hash": "7f1109a8a5271e9c192d4454e8b3404a8c42f904aa7030546a08b195fcd1dae2"
+          },
+          {
+            "height": 17,
+            "previous": "7f1109a8a5271e9c192d4454e8b3404a8c42f904aa7030546a08b195fcd1dae2",
+            "timestamp": 17,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 15,
+                "timestamp": 17,
+                "signature": "8d5d18bf0f253bfc6d98f363cd047174af19802cabe4ef102ab06bc4132c8694ac7919b6b930dfa5927464ab5ae6880a5cee61e62b72d50e2613b99a72b2b509"
+              }
+            ],
+            "hash": "15db1c119ddc5f54ebd6ae01d1945ebab403173e6e626aba5cba1df59d8fc425"
+          },
+          {
+            "height": 18,
+            "previous": "15db1c119ddc5f54ebd6ae01d1945ebab403173e6e626aba5cba1df59d8fc425",
+            "timestamp": 18,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 16,
+                "timestamp": 18,
+                "signature": "94abcab770a4aa5b0001c81e396e43f9204734c809e40a1139e5b3b363d60d638eff8828d3fb7ba5411983b53fef758f3930a97e1de1b095f31b7d38a4421e04"
+              }
+            ],
+            "hash": "3c0cdf22f731d7d2fccadd2cf8b2e5ba274b99cef56d240528f52628be0e64f4"
+          },
+          {
+            "height": 19,
+            "previous": "3c0cdf22f731d7d2fccadd2cf8b2e5ba274b99cef56d240528f52628be0e64f4",
+            "timestamp": 19,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 17,
+                "timestamp": 19,
+                "signature": "86c776faf54faa42854095c7a6b85b9122a5407b14c2bbe9142273ab90dfb8242a28e0a07d48b03accbe76432ccdccf5b8f8cfab7155a16a8e31768fb17a4e0d"
+              }
+            ],
+            "hash": "0884cb9e659f31c08898e31eb46fb8755dd611c81b5b93455c15eaffc6f49140"
+          },
+          {
+            "height": 20,
+            "previous": "0884cb9e659f31c08898e31eb46fb8755dd611c81b5b93455c15eaffc6f49140",
+            "timestamp": 20,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 18,
+                "timestamp": 20,
+                "signature": "b49711aa71c75b312d3e6e78b304b55a71fe6b206569695f5bfcc827cc577056274ea81e650b35f158ce3877acbe91c22ee370228bd93c5cdfb4213a844baa01"
+              }
+            ],
+            "hash": "bf560961f449f26b61732627d156283a6e0e64d3437e14939a7c604140e34015"
+          },
+          {
+            "height": 21,
+            "previous": "bf560961f449f26b61732627d156283a6e0e64d3437e14939a7c604140e34015",
+            "timestamp": 21,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 19,
+                "timestamp": 21,
+                "signature": "5e66ebd884db51a1984ccaa21299c9dffbbfffa63d8c54d0c90a505c79fa90580fb1350187439042aeee21c9dbab7b38f7d14f3f877c3ad8df66916e7233370f"
+              }
+            ],
+            "hash": "37690b2e2a06a4b85fbc8b65cf53d156dcc19a34ea405ac335fda378c3384f2d"
+          },
+          {
+            "height": 22,
+            "previous": "37690b2e2a06a4b85fbc8b65cf53d156dcc19a34ea405ac335fda378c3384f2d",
+            "timestamp": 22,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 20,
+                "timestamp": 22,
+                "signature": "30813ab55165990159adf521aa49487f414521cfffb526a95f4f2bc9810004dd2efbc01f9ebc40dbd4851f83c1c86007ccb70c7fe927da26f6145f05bbce230d"
+              }
+            ],
+            "hash": "b8db397d1d47904d39993920238df8a6f1503332334abdba08ce3b8ebb83784e"
+          },
+          {
+            "height": 23,
+            "previous": "b8db397d1d47904d39993920238df8a6f1503332334abdba08ce3b8ebb83784e",
+            "timestamp": 23,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 21,
+                "timestamp": 23,
+                "signature": "08d8ebea2e16edd58f80a9d45b163abfac1148bd0b00efc2f7eca1b911fa31250e7240620b415701a49f27cf748be2310d641677a628ea60cf96d4020a090609"
+              }
+            ],
+            "hash": "84badae0dad5985fea82cedad1a67d71f639f6e27ce17eb099be9612521dbc3d"
+          },
+          {
+            "height": 24,
+            "previous": "84badae0dad5985fea82cedad1a67d71f639f6e27ce17eb099be9612521dbc3d",
+            "timestamp": 24,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 22,
+                "timestamp": 24,
+                "signature": "1fac1fae4bbf84deb7f5779221ae91277c8c952e1aeff0033479c78f2340a0436814e15374c7ab0cbca26bc2719fdec486187eb2a93f89cb57cdc3c47a46e805"
+              }
+            ],
+            "hash": "42a08914e276e031caceedc1dfbab95ddc6e36c305b8f20c9564545a1aa1e563"
+          },
+          {
+            "height": 25,
+            "previous": "42a08914e276e031caceedc1dfbab95ddc6e36c305b8f20c9564545a1aa1e563",
+            "timestamp": 25,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "4c28598a11814a58e7a2a24279468c246ca8e88e6293748d15380897b23807d4",
+                "amount": 15,
+                "nonce": 1,
+                "timestamp": 25,
+                "signature": "45061f6c1b65f9e925855a8524b29bee58f898001cef38e0891068bff8a520e5be05fdd735d1fc86d2efa3bdc7d8228d795b1f4d90e72b3c3dbd9cfd17689809"
+              }
+            ],
+            "hash": "2ed14a31cd5a7808a3db9ae0d9380d9e8deb66b6a82c60dd55c9cb68379fc330"
+          },
+          {
+            "height": 26,
+            "previous": "2ed14a31cd5a7808a3db9ae0d9380d9e8deb66b6a82c60dd55c9cb68379fc330",
+            "timestamp": 25,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 23,
+                "timestamp": 25,
+                "signature": "d76f8f95518aa98d0f26f171688d4e0b1882188750d681cb961d472b0150ce74a57326c86f774fc9c22f3e54b73ccc04abf7185f8687ec770a2ccf035951fd0e"
+              }
+            ],
+            "hash": "366b5d9f8cd31c49c60122b3882883495819ca6d1b45cd259d9ee176246289ee"
+          },
+          {
+            "height": 27,
+            "previous": "366b5d9f8cd31c49c60122b3882883495819ca6d1b45cd259d9ee176246289ee",
+            "timestamp": 26,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "f59719f039202ccd8f74287068f4bdd9e2c51fd68d4626a421551c3e1ac8bb73",
+                "amount": 15,
+                "nonce": 2,
+                "timestamp": 26,
+                "signature": "6c1bfdba7e9696197c5280fbf3e0ef6df79d6f6490dcab2ee9f25a2aa188d568e0dc3b25cad527974ef6233f10e8194dec0480169dd6a8d3ccfd1331d386ce00"
+              }
+            ],
+            "hash": "5a1f4b59796338afd9806fe1a858370a0f69c8c8a8e194fff7e0b27ca16f870d"
+          },
+          {
+            "height": 28,
+            "previous": "5a1f4b59796338afd9806fe1a858370a0f69c8c8a8e194fff7e0b27ca16f870d",
+            "timestamp": 26,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 24,
+                "timestamp": 26,
+                "signature": "0841a634185ad73dd2cd85cd0f83f7012cd48677f30982bb86b992683e57fb37660e960874d2833039f62123639ab69f83d031e3ba55f3dd23eb5aeeed013901"
+              }
+            ],
+            "hash": "521428aad03af9c2045588ba1df0ae1fb47b27928c0a6774783974ad93e9aa40"
+          },
+          {
+            "height": 29,
+            "previous": "521428aad03af9c2045588ba1df0ae1fb47b27928c0a6774783974ad93e9aa40",
+            "timestamp": 27,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "c0caff0bb3285e3dbf77addecf081b360e2ac6fb53e7af1970633ac674202eb1",
+                "amount": 15,
+                "nonce": 3,
+                "timestamp": 27,
+                "signature": "9426b750debee42ace20818aa4aa0b57e18f066b62dcbb736ffaf247a96cb8066cf70ab1f1bfc8b1c02ff8a5c32d2609cbc98a1cdaa3763dbec338aafa63ba0e"
+              }
+            ],
+            "hash": "310557247902b706ce0a258b723934ab7d01a1c5acd261851591936a3708122d"
+          },
+          {
+            "height": 30,
+            "previous": "310557247902b706ce0a258b723934ab7d01a1c5acd261851591936a3708122d",
+            "timestamp": 27,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 25,
+                "timestamp": 27,
+                "signature": "c2173cc1ae220dff56af0b280c596962c46d1211e7ec55dd7fbb403d264851fc32601be0781be5a13e1551d817bcac617ce638e4ae9a12d8f8ba66cbb800db09"
+              }
+            ],
+            "hash": "13725af22a44ceff88f45a0db36803214e0db1bc4d8e8fbff7e52ca241a3deda"
+          },
+          {
+            "height": 31,
+            "previous": "13725af22a44ceff88f45a0db36803214e0db1bc4d8e8fbff7e52ca241a3deda",
+            "timestamp": 28,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 26,
+                "timestamp": 28,
+                "signature": "a8b0ded9710c1a02354f84b42a61498e6b3f6722153cab8ae6b4ccb160251f7c30e8a3aad80a96db8421e0e4711159db2d2b720ab154829412c58774b1b5f308"
+              }
+            ],
+            "hash": "7021dc005a1f5194ddc9ebd1b0115c15f9a9482402ffbb9d215b414db2d872b0"
+          },
+          {
+            "height": 32,
+            "previous": "7021dc005a1f5194ddc9ebd1b0115c15f9a9482402ffbb9d215b414db2d872b0",
+            "timestamp": 29,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 500,
+                "nonce": 27,
+                "timestamp": 29,
+                "signature": "0fb0907fdad9195bbd28cdfd5114a9af6bc208eaa307fd61df30e0985a5b85c9f70f9abdc9ad49fb807630d7d8b94c1c48dd7c3862b0580af217629cf173df09"
+              }
+            ],
+            "hash": "99701d0e5925aa38052af9a2d8806c57b8e6500b3cf150aa410ff039cc2dcec8"
+          }
+        ],
+        "wallet": {
+          "available": true,
+          "history": [
+            {
+              "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+              "recipient": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "amount": 20000,
+              "nonce": 0,
+              "timestamp": 1,
+              "signature": "656820a7a39b8526b5e76061e1561c2fd2fb61ae105139dbeaa2161f499c2a7a893aa772aa0b38950e438e126791a8427e6d79675d992cc98b33a64a17968a0f"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 0,
+              "timestamp": 2,
+              "signature": "097ce5988a8473c6f0c0cb5793893c457629f4db2eaef319c0bda7bc0f55b56098e781270da370fd00622efb235682edc2544977deda8ee0ed790c9dfe145207"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 1,
+              "timestamp": 3,
+              "signature": "eca3dd41ee15c95b4ae59dd56d59916966aa11a9388f786e368350d734d9c4f46701517b12c275c96cf8c3edb302e873ab26404e92639d0ac68909d286e8b703"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 2,
+              "timestamp": 4,
+              "signature": "dd1ce7ca181dbd1321597fc33c0fbe6d192f7e02deeed7ca6b538ba3772105657c543144432114e35788279e166a1b73d559f14c41b75a6e619013d34a10f208"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 3,
+              "timestamp": 5,
+              "signature": "75f57ef2bb505dd6730f83840d9c4d88135302ddf1cdb6568695bb755e3e108ed35c6fb898725ad40d16c5613d4ad5b1a92f088840feb524c909acd9fb44820b"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 4,
+              "timestamp": 6,
+              "signature": "0fe99ef415ed8c4cb4f801cc0320e1bbb41225e9c098aca9601d9fcbed216c62b1ce683966608274df0f772fe112366881130b9be3d585486a2002de7f09440d"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 5,
+              "timestamp": 7,
+              "signature": "ec2911c69f2ce3b68f27a31017ba84b6e40fcb63dbcf0f995dc94cb12bbd794fb60244d49adfe584292ceaa4c8b3b6e9cd19cd427d4af77f414c65d64af5ea03"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 6,
+              "timestamp": 8,
+              "signature": "9a98090ddeacb0ced475eb1b5a07ad37d65c7ec7fdf140279229ea7c95ce4b79c549b8b9ec3aab89a37522ab7875ee5ea86e0ed9203fceab5d036705cb040f08"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 7,
+              "timestamp": 9,
+              "signature": "c607703700b79c616d28e94b3021e408212c6ded292928fd9938b54e12cd58744f47528b9b5db85637fb2ceb130786598296dae25fb9a935df510a35b291aa0a"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 8,
+              "timestamp": 10,
+              "signature": "a8200c48eb650314271f299dca26036bcbf0ad6ad8c93fd064c9b45f73e6306a4398cc39fd0ddf400cf7146cd4b9f4d17004e4fcac10093906f7df0d82e7f80e"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 9,
+              "timestamp": 11,
+              "signature": "f78cb5144eac1c5d9bf945b141fec817462ef37af8e37a68e00e40113fa14b6a51637e493ac93c654f087ae0c7672aad8f7afbcde5f2f5fee3d3477a32db8503"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 10,
+              "timestamp": 12,
+              "signature": "c7949a84a198a4244d0c23963791e45d50897d00a41c2c28d7771440368230d403b9d0ab7364df37a934cd0bf9622e10d1da4faf69efd71069876a12a8758a09"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 11,
+              "timestamp": 13,
+              "signature": "5a5f177ed51202b81ae418f8a5c7a9d125c6dcb5942e602e55db91301873f4b572d080c769127b11458cffd4e342c9d0b58037f285fcfad05b2adbe02a6cd20b"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 12,
+              "timestamp": 14,
+              "signature": "9a2694f6a55223c6752b822c6defadcdd015deb1926f6f82b791bccf611fd9e8bc8762422e21e7958fe67f34c3c626c0139f09727721df3f0ac1b2c89f0be607"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 13,
+              "timestamp": 15,
+              "signature": "398a9274d5d0e345e31e72e32674cef90ac6488d684efad6592369f8175b88e8130ff79fe397d80b6b11b40e99e6de6d403a7cd80afa292757bbbdd9bf2fc505"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 14,
+              "timestamp": 16,
+              "signature": "de0131c246615e1ac73e6ed9f20e10d738d7cead597a9da40585d19ff3ace8d52167ce5a9013682e06d2dd4d7d8539307607cac84a51b7ec58d76c90ad40d505"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 15,
+              "timestamp": 17,
+              "signature": "8d5d18bf0f253bfc6d98f363cd047174af19802cabe4ef102ab06bc4132c8694ac7919b6b930dfa5927464ab5ae6880a5cee61e62b72d50e2613b99a72b2b509"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 16,
+              "timestamp": 18,
+              "signature": "94abcab770a4aa5b0001c81e396e43f9204734c809e40a1139e5b3b363d60d638eff8828d3fb7ba5411983b53fef758f3930a97e1de1b095f31b7d38a4421e04"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 17,
+              "timestamp": 19,
+              "signature": "86c776faf54faa42854095c7a6b85b9122a5407b14c2bbe9142273ab90dfb8242a28e0a07d48b03accbe76432ccdccf5b8f8cfab7155a16a8e31768fb17a4e0d"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 18,
+              "timestamp": 20,
+              "signature": "b49711aa71c75b312d3e6e78b304b55a71fe6b206569695f5bfcc827cc577056274ea81e650b35f158ce3877acbe91c22ee370228bd93c5cdfb4213a844baa01"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 19,
+              "timestamp": 21,
+              "signature": "5e66ebd884db51a1984ccaa21299c9dffbbfffa63d8c54d0c90a505c79fa90580fb1350187439042aeee21c9dbab7b38f7d14f3f877c3ad8df66916e7233370f"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 20,
+              "timestamp": 22,
+              "signature": "30813ab55165990159adf521aa49487f414521cfffb526a95f4f2bc9810004dd2efbc01f9ebc40dbd4851f83c1c86007ccb70c7fe927da26f6145f05bbce230d"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 21,
+              "timestamp": 23,
+              "signature": "08d8ebea2e16edd58f80a9d45b163abfac1148bd0b00efc2f7eca1b911fa31250e7240620b415701a49f27cf748be2310d641677a628ea60cf96d4020a090609"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 22,
+              "timestamp": 24,
+              "signature": "1fac1fae4bbf84deb7f5779221ae91277c8c952e1aeff0033479c78f2340a0436814e15374c7ab0cbca26bc2719fdec486187eb2a93f89cb57cdc3c47a46e805"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 23,
+              "timestamp": 25,
+              "signature": "d76f8f95518aa98d0f26f171688d4e0b1882188750d681cb961d472b0150ce74a57326c86f774fc9c22f3e54b73ccc04abf7185f8687ec770a2ccf035951fd0e"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 24,
+              "timestamp": 26,
+              "signature": "0841a634185ad73dd2cd85cd0f83f7012cd48677f30982bb86b992683e57fb37660e960874d2833039f62123639ab69f83d031e3ba55f3dd23eb5aeeed013901"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 25,
+              "timestamp": 27,
+              "signature": "c2173cc1ae220dff56af0b280c596962c46d1211e7ec55dd7fbb403d264851fc32601be0781be5a13e1551d817bcac617ce638e4ae9a12d8f8ba66cbb800db09"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 26,
+              "timestamp": 28,
+              "signature": "a8b0ded9710c1a02354f84b42a61498e6b3f6722153cab8ae6b4ccb160251f7c30e8a3aad80a96db8421e0e4711159db2d2b720ab154829412c58774b1b5f308"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 500,
+              "nonce": 27,
+              "timestamp": 29,
+              "signature": "0fb0907fdad9195bbd28cdfd5114a9af6bc208eaa307fd61df30e0985a5b85c9f70f9abdc9ad49fb807630d7d8b94c1c48dd7c3862b0580af217629cf173df09"
+            }
+          ],
+          "balance": 6000,
+          "model": {
+            "features": {
+              "count": 28,
+              "mean_amount": 500.0,
+              "counterparties": 1,
+              "frequency": 1.037037037037037
+            },
+            "isolation_score": -0.7164014849018422,
+            "lower_tail_percentile": 0.0,
+            "training_size": 160
+          }
+        },
+        "sybil": {
+          "available": true,
+          "funders": [
+            "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a"
+          ],
+          "observed_identities": [
+            {
+              "node_id": "8b93f65b3442c4dff31673c4e39a2bb2cd3ee0e6b37637e2cbc90abac4fb4107",
+              "wallet": "4c28598a11814a58e7a2a24279468c246ca8e88e6293748d15380897b23807d4",
+              "first_seen": 25
+            },
+            {
+              "node_id": "c16e76d91f3d3712e5e77b79e80a5c6bff400a487ed31e79f54e0b3998997ccc",
+              "wallet": "f59719f039202ccd8f74287068f4bdd9e2c51fd68d4626a421551c3e1ac8bb73",
+              "first_seen": 26
+            },
+            {
+              "node_id": "8a866cc928a441d21f07ed12e6a16259c27f5347e334b051b8473c67db50d0bb",
+              "wallet": "c0caff0bb3285e3dbf77addecf081b360e2ac6fb53e7af1970633ac674202eb1",
+              "first_seen": 27
+            }
+          ],
+          "same_timestamp_recipients": []
+        },
+        "eclipse": {
+          "available": true,
+          "observations": [
+            {
+              "peer": "relay-0",
+              "group": 0
+            },
+            {
+              "peer": "relay-1",
+              "group": 1
+            },
+            {
+              "peer": "relay-2",
+              "group": 2
+            },
+            {
+              "peer": "relay-3",
+              "group": 3
+            }
+          ],
+          "distinct_groups": 4,
+          "proposed_degree": 4
+        },
+        "finney": {
+          "available": true,
+          "observations": [
+            {
+              "wallet": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "nonce": 0,
+              "time": 200,
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1"
+            }
+          ],
+          "conflict": false,
+          "private_block_evidence": null
+        }
+      },
+      "investigation_id": "bfb148e2-6820-4826-9b1a-1e64fa0759f1",
+      "candidate_id": "e88510c172d619e9063ff1cf0e059bf97b183786f1fc0c6d0e828761e89c8195",
+      "elapsed_seconds": 1.565
+    },
+    "events": [
+      {
+        "sequence": 10,
+        "candidate": "e88510c172d619e9063ff1cf0e059bf97b183786f1fc0c6d0e828761e89c8195",
+        "time": "2026-11-23T12:40:43.784325+00:00",
+        "status": "PENDING_INVESTIGATION",
+        "detail": {}
+      },
+      {
+        "sequence": 11,
+        "candidate": "e88510c172d619e9063ff1cf0e059bf97b183786f1fc0c6d0e828761e89c8195",
+        "time": "2026-11-23T12:40:43.801240+00:00",
+        "status": "UNDER_INVESTIGATION",
+        "detail": {
+          "investigation_id": "bfb148e2-6820-4826-9b1a-1e64fa0759f1"
+        }
+      },
+      {
+        "sequence": 12,
+        "candidate": "e88510c172d619e9063ff1cf0e059bf97b183786f1fc0c6d0e828761e89c8195",
+        "time": "2026-11-23T12:40:45.381757+00:00",
+        "status": "AWAITING_ADMIN_REVIEW",
+        "detail": {
+          "investigation_id": "bfb148e2-6820-4826-9b1a-1e64fa0759f1"
+        }
+      }
+    ]
+  },
+  {
+    "scenario": "conflict",
+    "seed": 41,
+    "synthetic": true,
+    "model_enabled": false,
+    "administrator_decision": null,
+    "report": {
+      "order": [
+        "wallet",
+        "sybil",
+        "eclipse",
+        "finney"
+      ],
+      "planning": {
+        "mode": "evidence_only",
+        "rationale": "No model configured"
+      },
+      "results": {
+        "wallet": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "sybil": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "eclipse": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "finney": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        }
+      },
+      "supervisor_review": {
+        "summary": "Supervisor unavailable",
+        "concerns": [],
+        "request_followup": true
+      },
+      "trust": {
+        "risks": {
+          "sybil": null,
+          "wallet": null,
+          "finney": null,
+          "eclipse": null
+        },
+        "positive_inputs": {
+          "identity": 1.0,
+          "transaction": 1.0,
+          "network": 1.0,
+          "history": 1,
+          "behavior": 0.65625
+        },
+        "missing": [
+          "sybil",
+          "wallet",
+          "finney",
+          "eclipse"
+        ],
+        "missing_positive": [],
+        "supervisor_followup": true,
+        "attack_risk": null,
+        "positive_trust": null,
+        "factor": null,
+        "recommendation": "MORE_EVIDENCE"
+      },
+      "evidence": {
+        "network": {
+          "nodes": [
+            "relay-0",
+            "relay-1",
+            "relay-2",
+            "relay-3",
+            "relay-4",
+            "relay-5",
+            "a4fd5bda4d28ba9e4da33c9635163e163d1e98ba6f4db5e04b008761dee07f1e"
+          ],
+          "edges": [
+            {
+              "source": "relay-0",
+              "target": "relay-1",
+              "proposed": false
+            },
+            {
+              "source": "relay-0",
+              "target": "relay-5",
+              "proposed": false
+            },
+            {
+              "source": "relay-0",
+              "target": "a4fd5bda4d28ba9e4da33c9635163e163d1e98ba6f4db5e04b008761dee07f1e",
+              "proposed": true
+            },
+            {
+              "source": "relay-1",
+              "target": "relay-2",
+              "proposed": false
+            },
+            {
+              "source": "relay-1",
+              "target": "a4fd5bda4d28ba9e4da33c9635163e163d1e98ba6f4db5e04b008761dee07f1e",
+              "proposed": true
+            },
+            {
+              "source": "relay-2",
+              "target": "relay-3",
+              "proposed": false
+            },
+            {
+              "source": "relay-2",
+              "target": "a4fd5bda4d28ba9e4da33c9635163e163d1e98ba6f4db5e04b008761dee07f1e",
+              "proposed": true
+            },
+            {
+              "source": "relay-3",
+              "target": "relay-4",
+              "proposed": false
+            },
+            {
+              "source": "relay-3",
+              "target": "a4fd5bda4d28ba9e4da33c9635163e163d1e98ba6f4db5e04b008761dee07f1e",
+              "proposed": true
+            },
+            {
+              "source": "relay-4",
+              "target": "relay-5",
+              "proposed": false
+            }
+          ],
+          "replicas_agree": true
+        },
+        "blocks": [
+          {
+            "height": 0,
+            "previous": "b8e1c0cbb41ebce97df46dfcf51a3502c5e198ddb3160f83a49de589e9ae6de4",
+            "timestamp": 0,
+            "transactions": [],
+            "hash": "1085482c512357a1650ed89434840349ef56b0fdef7954e95d073ece17790b94"
+          },
+          {
+            "height": 1,
+            "previous": "1085482c512357a1650ed89434840349ef56b0fdef7954e95d073ece17790b94",
+            "timestamp": 1,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "amount": 20000,
+                "nonce": 0,
+                "timestamp": 1,
+                "signature": "656820a7a39b8526b5e76061e1561c2fd2fb61ae105139dbeaa2161f499c2a7a893aa772aa0b38950e438e126791a8427e6d79675d992cc98b33a64a17968a0f"
+              }
+            ],
+            "hash": "fced56bf697d0f0df0638fd4a1776fc53c67e0e7573feff83057bab90ce2b97d"
+          },
+          {
+            "height": 2,
+            "previous": "fced56bf697d0f0df0638fd4a1776fc53c67e0e7573feff83057bab90ce2b97d",
+            "timestamp": 2,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 9,
+                "nonce": 0,
+                "timestamp": 2,
+                "signature": "6ea907a6e233d99e40c8ddb6d5089a2aba5299ee54ffcfb7949726cf0f97499dda4441abd78f5bfefe1093a127b52cfee7ab68c9cc9da193c55a5c389fb06609"
+              }
+            ],
+            "hash": "674b4bbd82bb3206caa9652c212fbafacea50f92d1367daf22262b0a4c22d87e"
+          },
+          {
+            "height": 3,
+            "previous": "674b4bbd82bb3206caa9652c212fbafacea50f92d1367daf22262b0a4c22d87e",
+            "timestamp": 18,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40",
+                "amount": 7,
+                "nonce": 1,
+                "timestamp": 18,
+                "signature": "8256badee5cd2bd98bc7ceefdcacc4a1c75ae5d9c46deebf1f7b1828d64e5f4c351afefc104dfa8ec2810e8704ebba127dc63df5a22752299f7699f229d4ce03"
+              }
+            ],
+            "hash": "70664afc33ab2b44c28bc2e5dda6b1324c71139225b4fc2bc16a35fef16dcefd"
+          },
+          {
+            "height": 4,
+            "previous": "70664afc33ab2b44c28bc2e5dda6b1324c71139225b4fc2bc16a35fef16dcefd",
+            "timestamp": 25,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "4c28598a11814a58e7a2a24279468c246ca8e88e6293748d15380897b23807d4",
+                "amount": 15,
+                "nonce": 1,
+                "timestamp": 25,
+                "signature": "45061f6c1b65f9e925855a8524b29bee58f898001cef38e0891068bff8a520e5be05fdd735d1fc86d2efa3bdc7d8228d795b1f4d90e72b3c3dbd9cfd17689809"
+              }
+            ],
+            "hash": "3521b9c453cb24fd2f3a29c4c31eb8051c9aff10366836b74eb04f47ba06f073"
+          },
+          {
+            "height": 5,
+            "previous": "3521b9c453cb24fd2f3a29c4c31eb8051c9aff10366836b74eb04f47ba06f073",
+            "timestamp": 26,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "f59719f039202ccd8f74287068f4bdd9e2c51fd68d4626a421551c3e1ac8bb73",
+                "amount": 15,
+                "nonce": 2,
+                "timestamp": 26,
+                "signature": "6c1bfdba7e9696197c5280fbf3e0ef6df79d6f6490dcab2ee9f25a2aa188d568e0dc3b25cad527974ef6233f10e8194dec0480169dd6a8d3ccfd1331d386ce00"
+              }
+            ],
+            "hash": "d97394f8dbdd1c142e8e4bb4ed2fe5ca3066c5f4d1581f4a7479e6c4c018a424"
+          },
+          {
+            "height": 6,
+            "previous": "d97394f8dbdd1c142e8e4bb4ed2fe5ca3066c5f4d1581f4a7479e6c4c018a424",
+            "timestamp": 27,
+            "transactions": [
+              {
+                "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+                "recipient": "c0caff0bb3285e3dbf77addecf081b360e2ac6fb53e7af1970633ac674202eb1",
+                "amount": 15,
+                "nonce": 3,
+                "timestamp": 27,
+                "signature": "9426b750debee42ace20818aa4aa0b57e18f066b62dcbb736ffaf247a96cb8066cf70ab1f1bfc8b1c02ff8a5c32d2609cbc98a1cdaa3763dbec338aafa63ba0e"
+              }
+            ],
+            "hash": "bfb92baf542c2c145f8ea2b522aeda6ab1d815b8ac0a3e97ac2f979a505aedd7"
+          },
+          {
+            "height": 7,
+            "previous": "bfb92baf542c2c145f8ea2b522aeda6ab1d815b8ac0a3e97ac2f979a505aedd7",
+            "timestamp": 34,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "caeac59780074dead63a6168504f1cbe0797194a0c0ec2afa295d45e6afa5a99",
+                "amount": 30,
+                "nonce": 2,
+                "timestamp": 34,
+                "signature": "8012889ac139744206ea8c41c95aa4f866cc8232752653bc35822e383137e2808be3a2e1fa523dfc4de97f2bce3318c73b52536d7db2ff96a9a62e514b81a201"
+              }
+            ],
+            "hash": "783982849bbca18e2b52bfde56318ce82133fb6b0584fd606b0dcc7c4e495d23"
+          },
+          {
+            "height": 8,
+            "previous": "783982849bbca18e2b52bfde56318ce82133fb6b0584fd606b0dcc7c4e495d23",
+            "timestamp": 50,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "94a5c901623c93c7770eea4962f7fe13af4223fcfac9e1b6981409b9115cd9fb",
+                "amount": 14,
+                "nonce": 3,
+                "timestamp": 50,
+                "signature": "3e1bf334c9e82d99fa2d000f83e73bd61ed98e79c6d3308bf1b81eca2523ffe69330ffd19b55ea0357ffb3bc0d36949608159906903c23a5b114e52899f8e806"
+              }
+            ],
+            "hash": "53875a6a71d65ef7ecb970f878013f826bdb8cfe1e05fe1d9e710c46e14d9bc0"
+          },
+          {
+            "height": 9,
+            "previous": "53875a6a71d65ef7ecb970f878013f826bdb8cfe1e05fe1d9e710c46e14d9bc0",
+            "timestamp": 66,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+                "amount": 20,
+                "nonce": 4,
+                "timestamp": 66,
+                "signature": "01b06e909a74ffff1e7f1d5ab645af50258cbb254962eed4ce0d3294892b5da0d61bbc73817b7b931705cbbbe9ea0be9f7cd65a0a69a318f6eab2afe820ec30a"
+              }
+            ],
+            "hash": "1cd3b7293ac934e7bc27e94dd926cb029d7214e7252547cb3b2cee4f175fcfb0"
+          },
+          {
+            "height": 10,
+            "previous": "1cd3b7293ac934e7bc27e94dd926cb029d7214e7252547cb3b2cee4f175fcfb0",
+            "timestamp": 82,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40",
+                "amount": 30,
+                "nonce": 5,
+                "timestamp": 82,
+                "signature": "f03bb2b1cc5ab3db47caeddd3de92bd1a6f1f4b5e04a64af8893e71c01e8a1964d2bd6c2fff667f55855e1ac8d8ed3a15a3d6af67141f6b49dc4f9dcf18acd00"
+              }
+            ],
+            "hash": "8b087c99cc3ab40c6702b6d48bdec6579971ef14485edfeeee4cbdd55f0ba900"
+          },
+          {
+            "height": 11,
+            "previous": "8b087c99cc3ab40c6702b6d48bdec6579971ef14485edfeeee4cbdd55f0ba900",
+            "timestamp": 98,
+            "transactions": [
+              {
+                "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+                "recipient": "caeac59780074dead63a6168504f1cbe0797194a0c0ec2afa295d45e6afa5a99",
+                "amount": 24,
+                "nonce": 6,
+                "timestamp": 98,
+                "signature": "91682e3fef0af7a647097df3e803450b067b07d4882be24ea6bfc7034348d3718632afa12f0a81dea71409c07c88677d0146103c5521c5a6d5d1b6868ea08403"
+              }
+            ],
+            "hash": "834f23370532497977e4effd35026433003474c32771012ecfc57b82bdbd7cf7"
+          }
+        ],
+        "wallet": {
+          "available": true,
+          "history": [
+            {
+              "sender": "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a",
+              "recipient": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "amount": 20000,
+              "nonce": 0,
+              "timestamp": 1,
+              "signature": "656820a7a39b8526b5e76061e1561c2fd2fb61ae105139dbeaa2161f499c2a7a893aa772aa0b38950e438e126791a8427e6d79675d992cc98b33a64a17968a0f"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 9,
+              "nonce": 0,
+              "timestamp": 2,
+              "signature": "6ea907a6e233d99e40c8ddb6d5089a2aba5299ee54ffcfb7949726cf0f97499dda4441abd78f5bfefe1093a127b52cfee7ab68c9cc9da193c55a5c389fb06609"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40",
+              "amount": 7,
+              "nonce": 1,
+              "timestamp": 18,
+              "signature": "8256badee5cd2bd98bc7ceefdcacc4a1c75ae5d9c46deebf1f7b1828d64e5f4c351afefc104dfa8ec2810e8704ebba127dc63df5a22752299f7699f229d4ce03"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "caeac59780074dead63a6168504f1cbe0797194a0c0ec2afa295d45e6afa5a99",
+              "amount": 30,
+              "nonce": 2,
+              "timestamp": 34,
+              "signature": "8012889ac139744206ea8c41c95aa4f866cc8232752653bc35822e383137e2808be3a2e1fa523dfc4de97f2bce3318c73b52536d7db2ff96a9a62e514b81a201"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "94a5c901623c93c7770eea4962f7fe13af4223fcfac9e1b6981409b9115cd9fb",
+              "amount": 14,
+              "nonce": 3,
+              "timestamp": 50,
+              "signature": "3e1bf334c9e82d99fa2d000f83e73bd61ed98e79c6d3308bf1b81eca2523ffe69330ffd19b55ea0357ffb3bc0d36949608159906903c23a5b114e52899f8e806"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1",
+              "amount": 20,
+              "nonce": 4,
+              "timestamp": 66,
+              "signature": "01b06e909a74ffff1e7f1d5ab645af50258cbb254962eed4ce0d3294892b5da0d61bbc73817b7b931705cbbbe9ea0be9f7cd65a0a69a318f6eab2afe820ec30a"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40",
+              "amount": 30,
+              "nonce": 5,
+              "timestamp": 82,
+              "signature": "f03bb2b1cc5ab3db47caeddd3de92bd1a6f1f4b5e04a64af8893e71c01e8a1964d2bd6c2fff667f55855e1ac8d8ed3a15a3d6af67141f6b49dc4f9dcf18acd00"
+            },
+            {
+              "sender": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "recipient": "caeac59780074dead63a6168504f1cbe0797194a0c0ec2afa295d45e6afa5a99",
+              "amount": 24,
+              "nonce": 6,
+              "timestamp": 98,
+              "signature": "91682e3fef0af7a647097df3e803450b067b07d4882be24ea6bfc7034348d3718632afa12f0a81dea71409c07c88677d0146103c5521c5a6d5d1b6868ea08403"
+            }
+          ],
+          "balance": 19866,
+          "model": {
+            "features": {
+              "count": 7,
+              "mean_amount": 19.142857142857142,
+              "counterparties": 4,
+              "frequency": 0.07291666666666667
+            },
+            "isolation_score": -0.47527763802302986,
+            "lower_tail_percentile": 0.65625,
+            "training_size": 160
+          }
+        },
+        "sybil": {
+          "available": true,
+          "funders": [
+            "4bc7c55b90eff761702a00c0cdc71534be224f20e97cead94aba9788bf1baf6a"
+          ],
+          "observed_identities": [
+            {
+              "node_id": "8b93f65b3442c4dff31673c4e39a2bb2cd3ee0e6b37637e2cbc90abac4fb4107",
+              "wallet": "4c28598a11814a58e7a2a24279468c246ca8e88e6293748d15380897b23807d4",
+              "first_seen": 25
+            },
+            {
+              "node_id": "c16e76d91f3d3712e5e77b79e80a5c6bff400a487ed31e79f54e0b3998997ccc",
+              "wallet": "f59719f039202ccd8f74287068f4bdd9e2c51fd68d4626a421551c3e1ac8bb73",
+              "first_seen": 26
+            },
+            {
+              "node_id": "8a866cc928a441d21f07ed12e6a16259c27f5347e334b051b8473c67db50d0bb",
+              "wallet": "c0caff0bb3285e3dbf77addecf081b360e2ac6fb53e7af1970633ac674202eb1",
+              "first_seen": 27
+            }
+          ],
+          "same_timestamp_recipients": []
+        },
+        "eclipse": {
+          "available": true,
+          "observations": [
+            {
+              "peer": "relay-0",
+              "group": 0
+            },
+            {
+              "peer": "relay-1",
+              "group": 1
+            },
+            {
+              "peer": "relay-2",
+              "group": 2
+            },
+            {
+              "peer": "relay-3",
+              "group": 3
+            }
+          ],
+          "distinct_groups": 4,
+          "proposed_degree": 4
+        },
+        "finney": {
+          "available": true,
+          "observations": [
+            {
+              "wallet": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "nonce": 0,
+              "time": 200,
+              "recipient": "38a723399a6508e325b09491a55508dc482bc90e3a90ff75cdc828780b1701a1"
+            },
+            {
+              "wallet": "65306bb405bfbcbd383f786d0d3d4ffd2aac7c9f2a9a6048378fe9fbaade153f",
+              "nonce": 0,
+              "time": 204,
+              "recipient": "47bd719f19288ca2ded13707e8a7cf633fb9269c30c2ac0ffa376034c6255e40"
+            }
+          ],
+          "conflict": true,
+          "private_block_evidence": null
+        }
+      },
+      "investigation_id": "4738c9fa-e605-4da9-8305-d690d5f69e59",
+      "candidate_id": "a4fd5bda4d28ba9e4da33c9635163e163d1e98ba6f4db5e04b008761dee07f1e",
+      "elapsed_seconds": 0.284
+    },
+    "events": [
+      {
+        "sequence": 13,
+        "candidate": "a4fd5bda4d28ba9e4da33c9635163e163d1e98ba6f4db5e04b008761dee07f1e",
+        "time": "2026-11-23T12:40:45.398089+00:00",
+        "status": "PENDING_INVESTIGATION",
+        "detail": {}
+      },
+      {
+        "sequence": 14,
+        "candidate": "a4fd5bda4d28ba9e4da33c9635163e163d1e98ba6f4db5e04b008761dee07f1e",
+        "time": "2026-11-23T12:40:45.412165+00:00",
+        "status": "UNDER_INVESTIGATION",
+        "detail": {
+          "investigation_id": "4738c9fa-e605-4da9-8305-d690d5f69e59"
+        }
+      },
+      {
+        "sequence": 15,
+        "candidate": "a4fd5bda4d28ba9e4da33c9635163e163d1e98ba6f4db5e04b008761dee07f1e",
+        "time": "2026-11-23T12:40:45.710698+00:00",
+        "status": "AWAITING_ADMIN_REVIEW",
+        "detail": {
+          "investigation_id": "4738c9fa-e605-4da9-8305-d690d5f69e59"
+        }
+      }
+    ]
+  },
+  {
+    "scenario": "sparse",
+    "seed": 41,
+    "synthetic": true,
+    "model_enabled": false,
+    "administrator_decision": null,
+    "report": {
+      "order": [
+        "wallet",
+        "sybil",
+        "eclipse",
+        "finney"
+      ],
+      "planning": {
+        "mode": "evidence_only",
+        "rationale": "No model configured"
+      },
+      "results": {
+        "wallet": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "sybil": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "eclipse": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        },
+        "finney": {
+          "assessment": {
+            "status": "model_unconfigured",
+            "risk": null,
+            "confidence": 0,
+            "references": [],
+            "explanation": "Configure a tool-capable model.",
+            "indicators": []
+          },
+          "calls": []
+        }
+      },
+      "supervisor_review": {
+        "summary": "Supervisor unavailable",
+        "concerns": [],
+        "request_followup": true
+      },
+      "trust": {
+        "risks": {
+          "sybil": null,
+          "wallet": null,
+          "finney": null,
+          "eclipse": null
+        },
+        "positive_inputs": {
+          "identity": 1.0,
+          "transaction": 1.0,
+          "network": null,
+          "history": null,
+          "behavior": null
+        },
+        "missing": [
+          "sybil",
+          "wallet",
+          "finney",
+          "eclipse"
+        ],
+        "missing_positive": [
+          "network",
+          "history",
+          "behavior"
+        ],
+        "supervisor_followup": true,
+        "attack_risk": null,
+        "positive_trust": null,
+        "factor": null,
+        "recommendation": "MORE_EVIDENCE"
+      },
+      "evidence": {
+        "network": {
+          "nodes": [
+            "relay-0",
+            "relay-1",
+            "relay-2",
+            "relay-3",
+            "relay-4",
+            "relay-5",
+            "2f3dd9ba036490735c36e466b5e92e25a78ebd6c97b24c7eccb624af282f4061"
+          ],
+          "edges": [
+            {
+              "source": "relay-0",
+              "target": "relay-1",
+              "proposed": false
+            },
+            {
+              "source": "relay-0",
+              "target": "relay-5",
+              "proposed": false
+            },
+            {
+              "source": "relay-1",
+              "target": "relay-2",
+              "proposed": false
+            },
+            {
+              "source": "relay-2",
+              "target": "relay-3",
+              "proposed": false
+            },
+            {
+              "source": "relay-3",
+              "target": "relay-4",
+              "proposed": false
+            },
+            {
+              "source": "relay-4",
+              "target": "relay-5",
+              "proposed": false
+            }
+          ],
+          "replicas_agree": true
+        },
+        "blocks": [
+          {
+            "height": 0,
+            "previous": "b8e1c0cbb41ebce97df46dfcf51a3502c5e198ddb3160f83a49de589e9ae6de4",
+            "timestamp": 0,
+            "transactions": [],
+            "hash": "1085482c512357a1650ed89434840349ef56b0fdef7954e95d073ece17790b94"
+          }
+        ],
+        "wallet": {
+          "available": false,
+          "history": [],
+          "balance": 0,
+          "model": null
+        },
+        "sybil": {
+          "available": false,
+          "funders": [],
+          "observed_identities": [],
+          "same_timestamp_recipients": []
+        },
+        "eclipse": {
+          "available": false,
+          "observations": [],
+          "distinct_groups": 0,
+          "proposed_degree": 0
+        },
+        "finney": {
+          "available": false,
+          "observations": [],
+          "conflict": false,
+          "private_block_evidence": null
+        }
+      },
+      "investigation_id": "3251e74f-702e-4b64-936c-2ab389c21b7e",
+      "candidate_id": "2f3dd9ba036490735c36e466b5e92e25a78ebd6c97b24c7eccb624af282f4061",
+      "elapsed_seconds": 0.037
+    },
+    "events": [
+      {
+        "sequence": 16,
+        "candidate": "2f3dd9ba036490735c36e466b5e92e25a78ebd6c97b24c7eccb624af282f4061",
+        "time": "2026-11-23T12:40:45.730020+00:00",
+        "status": "PENDING_INVESTIGATION",
+        "detail": {}
+      },
+      {
+        "sequence": 17,
+        "candidate": "2f3dd9ba036490735c36e466b5e92e25a78ebd6c97b24c7eccb624af282f4061",
+        "time": "2026-11-23T12:40:45.748901+00:00",
+        "status": "UNDER_INVESTIGATION",
+        "detail": {
+          "investigation_id": "3251e74f-702e-4b64-936c-2ab389c21b7e"
+        }
+      },
+      {
+        "sequence": 18,
+        "candidate": "2f3dd9ba036490735c36e466b5e92e25a78ebd6c97b24c7eccb624af282f4061",
+        "time": "2026-11-23T12:40:45.795326+00:00",
+        "status": "AWAITING_ADMIN_REVIEW",
+        "detail": {
+          "investigation_id": "3251e74f-702e-4b64-936c-2ab389c21b7e"
+        }
+      }
+    ]
+  }
+]
